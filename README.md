@@ -26,8 +26,12 @@ characters/                  personnages, pixel art 32 bits détaillé
   index.json                 liste des identifiants, dans l'ordre d'affichage
   <id>/character.json        fiche : nom, couleur, taille, style, fichier de chaque pose, réglages
   <id>/<pose>.webp           une image par pose (fond transparent, détourée)
+games/<jeu>.json             besoins d'un jeu : poses communes, poses et accessoire de chaque style
+                             (publié par le jeu lui-même, ex. `npm run needs` dans Fighting Friends)
 format.json                  version du format des fichiers (numéro majeur des versions)
-scripts/validate.mjs         vérification de la banque (lancée avant chaque version)
+scripts/validate.mjs         vérification des images et des fiches (lancée avant chaque version)
+src/                         l'atelier (catalogue des poses, prompts, mannequins guides, import, export)
+tests/                       le catalogue couvre bien les besoins de chaque jeu
 ```
 
 Le format de `characters/` est celui de `public/assets/characters/` de Fighting Friends : un dossier par
@@ -60,11 +64,32 @@ Un script de construction (`npm run sprites` dans Fighting Friends) trouve le ta
 (`v2` = le plus récent des `v2.x`), le télécharge et copie le dossier demandé dans le jeu. Le dossier copié
 n'est pas versionné dans le dépôt du jeu : il est refait à chaque construction.
 
-## Ajouter ou modifier des sprites
+## L'atelier
 
-Pour l'instant, l'écran **Personnages & sprites** de Fighting Friends sert d'atelier : prompts, mannequins
-guides, import, réglages. Son export (`.zip`, un dossier par personnage) se dépose dans
-`characters/`. Un nouveau personnage s'ajoute aussi à `index.json`.
+L'atelier est publié sur **https://piascwal.github.io/sprite-bank/**. Pour chaque personnage, il montre les
+images de la banque, ce qui manque **jeu par jeu** (« Fighting Friends : 26 / 28 »), le prompt de chaque
+pose, le mannequin guide, et permet d'importer, régler et exporter.
 
-Une fois la banque à jour sur `main`, relancer la construction du jeu (onglet **Actions** du dépôt du jeu,
-**Run workflow**) pour qu'il récupère la nouvelle version.
+Les images importées restent sur l'appareil (marquées ✎ À ENVOYER) jusqu'à l'export : **Exporter les
+changements** pour un personnage, ou **Export en masse** pour tout choisir d'un coup. Le `.zip` se dépose
+dans `characters/` (un dossier par personnage ; un nouveau personnage s'ajoute aussi à `index.json`).
+
+Une fois la banque à jour sur `main`, relancer la construction des jeux concernés (onglet **Actions** du
+dépôt du jeu, **Run workflow**) pour qu'ils récupèrent la nouvelle version.
+
+## Une nouvelle pose pour un jeu
+
+1. Le catalogue (`src/catalog/sprite-poses.ts` ou `special-poses.ts`) reçoit la pose : nom, description
+   pour le prompt, posture du mannequin guide.
+2. Le jeu l'ajoute à ses besoins (`games/<jeu>.json`) et l'utilise dans son code.
+3. Dans l'atelier, la pose apparaît comme manquante pour ce jeu : générer, importer, exporter.
+
+Les autres jeux ne sont pas touchés : ils ne copient que les poses qu'ils demandent.
+
+## Développer l'atelier
+
+```bash
+npm install
+npm run dev        # atelier sur http://localhost:5173 (lit characters/ et games/ directement)
+npm run check      # images et fiches + types + lint + tests
+```

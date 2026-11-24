@@ -1,0 +1,408 @@
+/* Images des coups spéciaux et des projectiles. Chacune porte son propre nom (et non « spécial 1 / 2 ») :
+   un personnage qui change de style garde ses images, et deux styles qui partagent un geste partagent
+   la même image. La liste des images demandées pour un style se déduit de ses coups (voir prompts.ts). */
+import type { PoseName } from './poses';
+import type { CommonSpriteKey } from './sprite-poses';
+
+/** Même forme qu'une pose commune (SpritePoseSpec), mais les replis ne visent que des poses communes. */
+interface SpecialSpec {
+  label: string;
+  rig: PoseName | null;
+  desc: string;
+  h?: number;
+  w?: number;
+  ax?: number;
+  fb: readonly CommonSpriteKey[];
+  proj?: boolean;
+  pet?: boolean;
+}
+
+/** Posture de coup spécial : image du personnage, détourée comme les autres. */
+const pose = (label: string, rig: PoseName, desc: string, extra: Partial<SpecialSpec>): SpecialSpec => ({
+  label,
+  rig,
+  desc,
+  h: 1,
+  ax: 0.42,
+  fb: ['punch_heavy', 'idle'],
+  ...extra,
+});
+
+/** Animal de compagnie (style Dresseur) : image de l'animal seul, de profil, d'après sa photo. */
+const pet = (label: string, desc: string): SpecialSpec => ({
+  label,
+  rig: null,
+  proj: true,
+  pet: true,
+  fb: [],
+  desc,
+});
+
+/** Projectile : image d'un effet seul, sans personnage. */
+const projectile = (label: string, desc: string): SpecialSpec => ({
+  label,
+  rig: null,
+  proj: true,
+  fb: [],
+  desc,
+});
+
+export const SPECIAL_POSES = {
+  // ---------- gestes de coups spéciaux ----------
+  sp_energy_cast: pose(
+    "Lancer d'énergie",
+    'cast',
+    "lancer d'une boule d'énergie : jambes en fente, buste engagé, les deux bras tendus vers l'avant, paumes ouvertes jointes devant lui (ne dessine PAS l'énergie)",
+    { h: 0.95, ax: 0.38 },
+  ),
+  sp_rising_uppercut: pose(
+    'Uppercut sauté',
+    'upper',
+    "uppercut sauté : en l'air (aucun sol visible), corps étiré en diagonale vers le haut, un poing levé très haut au-dessus de la tête, un genou relevé",
+    { h: 1.1, ax: 0.45, fb: ['uppercut', 'punch_heavy', 'idle'] },
+  ),
+  sp_dash_punch: pose(
+    'Poing en pleine ruée',
+    'dashP',
+    "coup de poing en pleine ruée : corps très penché vers l'avant presque à l'horizontale, bras avant tendu droit devant, jambe arrière tendue loin derrière, comme un sprint",
+    { h: 0.85 },
+  ),
+  sp_spin_kick: pose(
+    'Coup de pied tournoyant',
+    'spinK',
+    "coup de pied tournoyant : debout sur une jambe, l'autre jambe tendue à l'horizontale à hauteur de poitrine, bras écartés pour l'équilibre, corps en pleine rotation",
+    { fb: ['kick_heavy', 'idle'] },
+  ),
+  sp_ground_slam: pose(
+    'Frappe du sol',
+    'slam',
+    "frappe du sol : buste complètement plié vers l'avant, les deux poings écrasés ensemble contre le sol devant ses pieds, genoux fléchis",
+    { h: 0.75, ax: 0.38, fb: ['crouch_punch', 'crouch', 'idle'] },
+  ),
+  sp_shoulder_charge: pose(
+    "Charge à l'épaule",
+    'shoulder',
+    "charge à l'épaule : corps penché vers l'avant, épaule avant en bélier, bras repliés contre le torse, tête rentrée, en pleine course",
+    { h: 0.9 },
+  ),
+  sp_blade_throw: pose(
+    'Lancer de lame',
+    'throwS',
+    "lancer d'un projectile : buste engagé, bras avant tendu vers l'avant main ouverte comme s'il venait de lancer une lame, l'autre bras tiré en arrière (ne dessine PAS le projectile)",
+    { h: 0.95, ax: 0.38 },
+  ),
+  sp_dive_kick: pose(
+    'Pied plongeant',
+    'diveK',
+    "coup de pied plongeant : en l'air (aucun sol visible), corps en diagonale, une jambe tendue pointée vers le bas et l'avant, l'autre repliée, bras en arrière",
+    { fb: ['jump_kick', 'kick_heavy', 'idle'] },
+  ),
+  sp_grab: pose(
+    'Saisie',
+    'grab',
+    "saisie à bras-le-corps : buste penché vers l'avant, les deux bras tendus devant lui, mains ouvertes prêtes à attraper l'adversaire, jambes fléchies et bien ancrées",
+    { h: 0.95 },
+  ),
+  sp_body_splash: pose(
+    'Plongeon du corps',
+    'splash',
+    "plongeon du corps en l'air (aucun sol visible) : tout le corps presque à l'horizontale, ventre vers le bas, bras et jambes écartés, comme un catcheur qui s'écrase sur son adversaire",
+    { h: undefined, w: 0.95, ax: 0.5, fb: ['fall', 'jump', 'idle'] },
+  ),
+  sp_counter_stance: pose(
+    'Garde de contre',
+    'counterStance',
+    "garde de contre : debout, bien campé, main avant ouverte tendue devant lui paume vers l'adversaire, autre main près de la hanche, regard calme et concentré",
+    { ax: 0.4, fb: ['block', 'idle'] },
+  ),
+  sp_palm_strike: pose(
+    'Frappe de paume',
+    'palm',
+    "frappe de paume : jambes en fente, buste engagé, un seul bras tendu droit devant, paume ouverte tournée vers l'avant, l'autre bras tiré en arrière",
+    { h: 0.95, ax: 0.38 },
+  ),
+  sp_rising_spin: pose(
+    'Vrille aérienne',
+    'risingSpin',
+    "vrille aérienne (aucun sol visible) : en train de s'élever en tournoyant, une jambe tendue vers le haut et l'avant, l'autre repliée, un bras levé, corps légèrement penché en arrière",
+    { h: 1.1, fb: ['jump_kick', 'kick_heavy', 'idle'] },
+  ),
+  sp_slide: pose(
+    'Glissade',
+    'slide',
+    'glissade au sol : presque allongé sur le dos, glissant les pieds en avant, jambe avant tendue au ras du sol, une main traînant au sol derrière lui',
+    { h: 0.5, ax: 0.3, fb: ['crouch_kick', 'crouch', 'idle'] },
+  ),
+  sp_hook_lunge: pose(
+    'Crochet plongeant',
+    'hookLunge',
+    "crochet plongeant : grand pas en avant, corps très penché, bras avant qui frappe en arc de haut en bas, l'autre poing en garde",
+    { h: 0.85 },
+  ),
+  sp_axe_kick: pose(
+    'Coup de pied de hache',
+    'axeKick',
+    "coup de pied de hache : debout sur une jambe, l'autre jambe tendue à la verticale au-dessus de la tête, prête à retomber comme une hache, bras écartés",
+    { h: 1.2, ax: 0.45, fb: ['kick_heavy', 'idle'] },
+  ),
+  sp_sky_call: pose(
+    'Appel de la foudre',
+    'skyCall',
+    "appel de la foudre : debout, un bras tendu à la verticale vers le ciel, doigts pointés vers le haut, l'autre bras le long du corps, tête levée (ne dessine PAS d'éclair)",
+    { h: 1.12, ax: 0.5, fb: ['win', 'idle'] },
+  ),
+  sp_sway: pose(
+    'Esquive titubante',
+    'sway',
+    "esquive titubante façon boxe de l'homme ivre : corps penché très en arrière, presque déséquilibré, un bras levé au-dessus de la tête, un genou fléchi, expression hilare",
+    { ax: 0.55, fb: ['hit', 'idle'] },
+  ),
+  sp_lob_throw: pose(
+    'Lancer en cloche',
+    'lobThrow',
+    "lancer en cloche : buste engagé, bras avant levé vers le haut et l'avant comme s'il venait de lancer un objet par en dessous, l'autre bras en arrière (ne dessine PAS l'objet)",
+    { h: 0.95 },
+  ),
+
+  sp_somersault: pose(
+    'Saut périlleux',
+    'somersault',
+    "saut périlleux arrière en coup de pied (aucun sol visible) : corps renversé en arrière dans les airs, une jambe tendue qui fouette vers le haut et l'avant, bras écartés",
+    { h: 1.1, ax: 0.5, fb: ['jump_kick', 'kick_heavy', 'idle'] },
+  ),
+  sp_flip_kick: pose(
+    'Coup de talon retourné',
+    'flipKick',
+    "salto avant en l'air (aucun sol visible) : corps penché vers l'avant presque à l'horizontale, une jambe tendue qui retombe talon en avant comme un marteau",
+    { fb: ['jump_kick', 'kick_heavy', 'idle'] },
+  ),
+  sp_tiger_stance: pose(
+    'Posture du tigre',
+    'tigerStance',
+    'posture du tigre : très bas sur ses jambes fléchies, buste penché en avant, les deux mains ouvertes en griffes tendues devant lui, regard de prédateur',
+    { h: 0.68, ax: 0.45, fb: ['crouch', 'idle'] },
+  ),
+  sp_rage: pose(
+    'Rage',
+    'rage',
+    "explosion de rage : debout, jambes écartées, bras fléchis et poings serrés de chaque côté du corps, muscles bandés, tête en arrière, il hurle (ne dessine PAS d'aura)",
+    { h: 1.05, ax: 0.5, fb: ['super', 'win', 'idle'] },
+  ),
+  sp_plant: pose(
+    'Pose de mine',
+    'plant',
+    'accroupi sur un genou, penché en avant, en train de poser délicatement un petit engin explosif au sol devant lui avec une main',
+    { h: 0.62, ax: 0.45, fb: ['crouch', 'idle'] },
+  ),
+  sp_mirror_guard: pose(
+    'Garde miroir',
+    'mirrorGuard',
+    "garde miroir : debout, les deux avant-bras croisés en X devant le visage, paumes ouvertes vers l'avant, comme pour renvoyer une attaque",
+    { ax: 0.45, fb: ['block', 'idle'] },
+  ),
+  sp_burst: pose(
+    "Libération d'énergie",
+    'burst',
+    "libération d'énergie : debout, jambes écartées, les deux bras écartés vers le haut en V, poitrine en avant, tête levée (ne dessine PAS l'énergie)",
+    { h: 1.05, ax: 0.5, fb: ['super', 'win', 'idle'] },
+  ),
+  sp_lotus_knee: pose(
+    'Genou du lotus',
+    'lotusKnee',
+    "coup de genou sauté (aucun sol visible) : en train de s'élever, un genou levé très haut devant lui, un bras levé, l'autre tiré en arrière",
+    { h: 1.05, ax: 0.45, fb: ['jump_kick', 'kick_light', 'idle'] },
+  ),
+  sp_meditate: pose(
+    'Méditation',
+    'meditate',
+    'en méditation : assis en tailleur au sol, dos bien droit, mains posées sur les genoux paumes vers le haut, yeux fermés, expression sereine',
+    { h: 0.55, ax: 0.5, fb: ['crouch', 'idle'] },
+  ),
+  sp_ball_kick: pose(
+    'Tir au ballon',
+    'ballKick',
+    "tir de footballeur : il vient de frapper un ballon du coup de pied avant, jambe tendue devant lui, bras écartés pour l'équilibre, buste légèrement en arrière, l'air détendu et sûr de lui (ne dessine PAS le ballon)",
+    {},
+  ),
+  sp_nonchalant: pose(
+    'Nonchalance',
+    'nonchalant',
+    "attitude de flemme totale : debout, épaules haussées et affaissées, les mains dans les poches ou les bras ballants, tête penchée sur le côté, il bâille en se grattant la nuque, l'air complètement blasé et pas du tout concerné par le combat",
+    {},
+  ),
+  sp_slapshot: pose(
+    'Lancer frappé',
+    'slapshot',
+    "lancer frappé au hockey : il tient sa crosse de hockey à deux mains, buste penché vers l'avant, la crosse vient de frapper au ras du sol et part vers l'avant, jambes en fente (ne dessine PAS le palet)",
+    { h: 0.9, ax: 0.38, fb: ['punch_heavy', 'idle'] },
+  ),
+  sp_body_check: pose(
+    'Mise en échec',
+    'bodyCheck',
+    'mise en échec au hockey : il fonce épaule en avant, buste penché, sa crosse de hockey tenue à deux mains en travers devant la poitrine, jambes en pleine course',
+    { h: 0.9, ax: 0.42, fb: ['punch_heavy', 'idle'] },
+  ),
+  sp_hockey_fight: pose(
+    'Bagarre de hockey',
+    'brawl',
+    "bagarre de hockey, gants jetés : sans crosse, une main agrippe vers l'avant un maillot invisible (poing fermé tendu à hauteur d'épaule), l'autre poing armé au-dessus de la tête prêt à frapper, mâchoire serrée",
+    { h: 1, ax: 0.42, fb: ['punch_light', 'idle'] },
+  ),
+
+  sp_call_pet: pose(
+    "Appel de l'animal",
+    'command',
+    "il appelle son animal de compagnie pour qu'il fonce : un bras tendu droit devant lui, index pointé vers l'avant, l'autre main portée à la bouche comme pour siffler, buste penché vers l'avant, sourire complice",
+    { h: 0.97, ax: 0.42, fb: ['punch_heavy', 'idle'] },
+  ),
+  sp_signal_jump: pose(
+    'Signal du saut',
+    'signal',
+    "il donne à son animal de compagnie le signal du saut : un bras levé bien haut au-dessus de la tête, main ouverte, l'autre poing sur la hanche, genoux fléchis, regard joyeux tourné vers l'avant",
+    { h: 1.1, ax: 0.45, fb: ['uppercut', 'idle'] },
+  ),
+
+  sp_win_pet: pose(
+    "Victoire avec l'animal",
+    'win',
+    "pose de victoire en tenant son animal de compagnie dans ses bras, serré contre sa poitrine (joins aussi l'image « Animal au repos » : l'animal doit être exactement le même) : debout, grand sourire, la tête penchée vers l'animal, qui a l'air ravi, langue sortie",
+    { h: 1, ax: 0.45, fb: ['win', 'idle'] },
+  ),
+
+  // ---------- padel ----------
+  sp_racket_drive: pose(
+    'Frappe de raquette',
+    'racketDrive',
+    "frappe un coup droit avec une raquette de padel (raquette pleine et perforée, sans cordage) tenue d'une main : bras tendu vers l'avant à hauteur de taille, raquette à l'horizontale qui vient de frapper, l'autre bras tiré en arrière pour l'équilibre, jambes en fente (ne dessine PAS la balle)",
+    { h: 0.95, ax: 0.4, fb: ['punch_heavy', 'idle'] },
+  ),
+  sp_racket_smash: pose(
+    'Smash',
+    'racketSmash',
+    "smash de padel en plein saut (aucun sol visible) : corps cambré, raquette de padel (pleine et perforée, sans cordage) levée bien au-dessus de la tête et qui s'abat vers l'avant, l'autre bras tendu vers le haut pour viser, genoux repliés",
+    { h: 1.1, ax: 0.45, fb: ['jump_punch', 'uppercut', 'idle'] },
+  ),
+
+  // ---------- yogi mystique ----------
+  sp_mudra: pose(
+    'Mudra',
+    'mudra',
+    "en équilibre sur une jambe, l'autre pied posé contre l'intérieur du genou (posture de l'arbre), les deux mains jointes devant lui puis ouvertes vers l'avant en mudra, doigts en position rituelle, yeux mi-clos, expression sereine et concentrée (ne dessine PAS l'énergie)",
+    { h: 1, ax: 0.45, fb: ['punch_light', 'idle'] },
+  ),
+  sp_levitate: pose(
+    'Lévitation',
+    'levitate',
+    'en lévitation au-dessus du sol (aucun sol visible) : assis en tailleur en position du lotus, dos droit, les deux bras écartés paumes ouvertes vers le bas, yeux fermés, cheveux et vêtements soulevés par une force invisible',
+    { h: 0.65, ax: 0.5, fb: ['crouch', 'idle'] },
+  ),
+
+  // ---------- danseuse de boîte de nuit ----------
+  sp_pirouette: pose(
+    'Pirouette',
+    'pirouette',
+    "pirouette de danse en tournant sur la pointe d'un pied : l'autre jambe tendue en arrière et levée haut, les deux bras levés au-dessus de la tête, robe à paillettes qui s'évase et tourne autour d'elle, cheveux qui volent",
+    { h: 1.05, ax: 0.5, fb: ['kick_heavy', 'idle'] },
+  ),
+  sp_pole_spin: pose(
+    'Pole dance',
+    'poleSpin',
+    "figure de pole dance : agrippée d'une main en haut à une barre verticale chromée qui va du sol jusqu'en haut de l'image (la barre fait partie du dessin), corps en l'air presque à l'horizontale, jambes tendues qui fouettent vers l'avant comme un coup de pied circulaire, robe à paillettes, cheveux qui volent",
+    { h: 1.15, ax: 0.4, fb: ['kick_heavy', 'idle'] },
+  ),
+
+  // ---------- animal de compagnie (style Dresseur) ----------
+  pj_pet_idle: pet(
+    'Animal au repos',
+    "debout sur ses quatre pattes, tête levée, oreilles dressées, gueule entrouverte et langue légèrement sortie, queue relevée qui remue : l'air joyeux et joueur",
+  ),
+  pj_pet_run1: pet(
+    'Animal qui court (1)',
+    "en pleine course au galop : pattes avant tendues loin devant, pattes arrière tendues loin derrière, corps allongé, oreilles au vent, langue pendante, l'air joueur et joyeux",
+  ),
+  pj_pet_run2: pet(
+    'Animal qui court (2)',
+    "en pleine course au galop, l'autre temps de la foulée : les quatre pattes regroupées sous le ventre, dos arrondi, oreilles au vent, langue pendante, l'air joueur et joyeux",
+  ),
+  pj_pet_leap: pet(
+    'Animal qui saute',
+    "en plein bond dans les airs (aucun sol visible) : corps étiré en diagonale vers l'avant et le haut, pattes avant tendues devant lui, pattes arrière tendues derrière, queue relevée, gueule ouverte joyeuse, comme pour sauter dans les bras de quelqu'un pour jouer",
+  ),
+
+  // ---------- projectiles ----------
+  pj_fireball: projectile(
+    'Boule de feu',
+    "une boule de feu / d'énergie incandescente avec une courte traînée de flammes vers la gauche",
+  ),
+  pj_blade: projectile(
+    'Lame',
+    "une lame d'énergie tranchante en forme de croissant, avec une courte traînée vers la gauche",
+  ),
+  pj_shockwave: projectile(
+    'Onde de choc',
+    'une onde de choc qui court au ras du sol : éclats de roche et poussière soulevés en forme de vague',
+  ),
+  pj_ice_shard: projectile(
+    'Éclat de glace',
+    'un gros éclat de glace pointu et bleuté, avec une traînée de givre vers la gauche',
+  ),
+  pj_ice_spike: projectile(
+    'Pic de glace',
+    'un grand pic de glace qui jaillit verticalement du sol, pointe vers le haut, éclats de givre à sa base',
+  ),
+  pj_lightning: projectile(
+    'Éclair',
+    "un éclair vertical qui tombe du ciel jusqu'au sol, zigzag lumineux bleu et blanc, très haut et étroit",
+  ),
+  pj_bottle: projectile(
+    'Gourde',
+    "une gourde / bouteille de saké en terre cuite qui tournoie dans l'air, avec quelques gouttes qui s'en échappent",
+  ),
+  pj_palm_wave: projectile(
+    'Onde de paume',
+    "une onde d'énergie en forme d'empreinte de main ouverte, translucide, avec des cercles de souffle autour",
+  ),
+  pj_disc: projectile(
+    'Disque tranchant',
+    "un disque d'énergie tranchant vu de côté, très fin et tournoyant, avec une courte traînée vers la gauche",
+  ),
+  pj_mine: projectile(
+    'Mine',
+    'une petite mine posée au sol, ronde et métallique, avec un voyant rouge allumé au sommet',
+  ),
+  pj_grenade: projectile('Grenade', 'une petite bombe ronde et noire avec une mèche allumée qui crépite'),
+  pj_light: projectile(
+    'Éclat de lumière',
+    'un éclat de lumière blanche et dorée en forme de losange, avec une courte traînée vers la gauche',
+  ),
+  pj_padel_ball: projectile(
+    'Balle de padel',
+    'une balle de padel jaune fluo vue de côté, lancée à toute vitesse, avec une courte traînée de vent et de vitesse vers la gauche',
+  ),
+  pj_mandala: projectile(
+    'Mandala',
+    "un mandala d'énergie spirituelle rond et lumineux, motifs sacrés dorés et violets qui tournent, avec un léger halo",
+  ),
+  pj_spirit: projectile(
+    'Esprit totem',
+    "l'esprit d'un animal totem (un grand aigle aux ailes déployées) fait de lumière spirituelle translucide bleue et dorée, qui fonce vers la droite",
+  ),
+  pj_spotlight: projectile(
+    'Projecteur',
+    "un faisceau de projecteur de boîte de nuit, colonne de lumière verticale rose et violette qui tombe du plafond jusqu'au sol, pailletée d'éclats de boule à facettes, très haute et étroite",
+  ),
+  pj_beam: projectile(
+    'Rayon',
+    "un rayon d'énergie horizontal, long et épais, très lumineux au centre, qui traverse toute la largeur de l'image",
+  ),
+  pj_football: projectile(
+    'Ballon de foot',
+    "un ballon de football classique noir et blanc vu de côté, qui file très vite en tournant, avec une traînée de vitesse et quelques brins d'herbe arrachés vers la gauche",
+  ),
+  pj_puck: projectile(
+    'Palet',
+    "un palet de hockey noir vu de côté (disque plat et épais), qui glisse très vite au ras du sol, avec une traînée de glace pilée et d'étincelles blanches vers la gauche",
+  ),
+} satisfies Record<string, SpecialSpec>;
+
+export type SpecialSpriteKey = keyof typeof SPECIAL_POSES;

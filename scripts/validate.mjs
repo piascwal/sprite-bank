@@ -37,7 +37,8 @@ function checkCharacter(id) {
   for (const name of readdirSync(dir)) {
     if (!IMAGE.test(name)) continue;
     if (!cited.has(name)) warnings.push(`${id} : image non citée dans character.json : ${name}`);
-    if (statSync(join(dir, name)).size > MAX_IMAGE_BYTES) warnings.push(`${id} : image très lourde : ${name}`);
+    if (statSync(join(dir, name)).size > MAX_IMAGE_BYTES)
+      warnings.push(`${id} : image très lourde : ${name}`);
   }
 }
 

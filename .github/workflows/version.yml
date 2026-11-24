@@ -1,27 +1,52 @@
-# À chaque changement sur main : vérifie la banque, puis pose la version suivante (v1.0, v1.1…).
-# Le numéro majeur vient de format.json : il ne change que si le format des fichiers change et casserait
-# les jeux. Les jeux prennent « la dernière v1 » : les ajouts leur arrivent à leur prochaine construction.
-name: Vérifier et versionner
+# À chaque changement sur main : vérifie la banque (images, fiches, catalogue, atelier), publie l'atelier
+# sur GitHub Pages, puis pose la version suivante (v2.0, v2.1…). Le numéro majeur vient de format.json :
+# il ne change que si le format des fichiers change et casserait les jeux. Les jeux prennent « la dernière »
+# version de leur numéro majeur : les ajouts leur arrivent à leur prochaine construction.
+name: Vérifier, publier et versionner
 on:
   push:
     branches: [main]
   workflow_dispatch:
 permissions:
   contents: write
+  pages: write
+  id-token: write
 concurrency:
   group: version
   cancel-in-progress: false
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # images, fiches, catalogue des poses, types et lint : rien n'est publié si une étape échoue
+      - run: npm run check
+      - run: npm run format:check
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  publish:
+    needs: check
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
   version:
+    needs: check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - run: node scripts/validate.mjs
       - name: Poser la version suivante
         run: |
           major=$(node -p "require('./format.json').major")

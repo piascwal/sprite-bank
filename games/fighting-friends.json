@@ -1,0 +1,240 @@
+{
+  "game": "fighting-friends",
+  "label": "Fighting Friends",
+  "common": [
+    "idle",
+    "portrait",
+    "walk1",
+    "walk2",
+    "crouch",
+    "jump",
+    "block",
+    "crouch_block",
+    "punch_light",
+    "punch_heavy",
+    "kick_light",
+    "kick_heavy",
+    "crouch_punch",
+    "crouch_kick",
+    "uppercut",
+    "jump_punch",
+    "jump_kick",
+    "super",
+    "hit",
+    "fall",
+    "down",
+    "win",
+    "intro",
+    "stage"
+  ],
+  "styles": {
+    "balanced": {
+      "label": "Équilibré",
+      "hint": "Boule de feu, uppercut enflammé",
+      "archetype": "Polyvalent",
+      "tags": ["Projectile", "Anti-aérien", "Invincible"],
+      "poses": ["sp_energy_cast", "pj_fireball", "sp_rising_uppercut"]
+    },
+    "fast": {
+      "label": "Rapide",
+      "hint": "Ruée éclair, cyclone de coups de pied",
+      "archetype": "Agresseur",
+      "tags": ["Ruée", "Multi-coups", "Anti-aérien"],
+      "poses": ["sp_dash_punch", "sp_spin_kick"]
+    },
+    "heavy": {
+      "label": "Lourd",
+      "hint": "Onde de choc au sol, charge blindée",
+      "archetype": "Puissant",
+      "tags": ["Projectile", "Armure", "Coup bas"],
+      "poses": ["sp_ground_slam", "pj_shockwave", "sp_shoulder_charge"]
+    },
+    "tech": {
+      "label": "Technique",
+      "hint": "Lame à distance, téléportation plongeante",
+      "archetype": "Insaisissable",
+      "tags": ["Projectile", "Téléportation", "Invincible"],
+      "poses": ["sp_blade_throw", "pj_blade", "sp_dive_kick"]
+    },
+    "grappler": {
+      "label": "Lutteur",
+      "hint": "Prises imparables, plongeon écrasant",
+      "archetype": "Lutteur",
+      "tags": ["Prise", "Casse-garde", "Anti-aérien"],
+      "poses": ["sp_grab", "sp_body_splash"]
+    },
+    "counter": {
+      "label": "Maître du contre",
+      "hint": "Garde qui renvoie les coups, paume de souffle",
+      "archetype": "Contre",
+      "tags": ["Contre", "Projectile", "Multi-coups"],
+      "poses": ["sp_counter_stance", "sp_palm_strike", "pj_palm_wave"]
+    },
+    "ice": {
+      "label": "Givre",
+      "hint": "Éclat qui fige, pic de glace à distance",
+      "archetype": "Zoneur",
+      "tags": ["Projectile", "À distance", "Fige"],
+      "poses": ["sp_energy_cast", "pj_ice_shard", "sp_ground_slam", "pj_ice_spike"]
+    },
+    "acrobat": {
+      "label": "Voltigeur",
+      "hint": "Vrille anti-aérienne, glissade sous les projectiles",
+      "archetype": "Aérien",
+      "tags": ["Anti-aérien", "Coup bas", "Invincible"],
+      "poses": ["sp_rising_spin", "sp_slide"]
+    },
+    "boxer": {
+      "label": "Boxeur",
+      "hint": "Rafale de directs, crochet plongeant",
+      "archetype": "Agresseur",
+      "tags": ["Multi-coups", "Casse-garde", "Ruée"],
+      "poses": ["sp_hook_lunge", "sp_dash_punch"]
+    },
+    "kicker": {
+      "label": "Taekwondo",
+      "hint": "Pieds fouettés, coup de pied de hache",
+      "archetype": "Agresseur",
+      "tags": ["Multi-coups", "Casse-garde", "Ruée"],
+      "poses": ["sp_axe_kick", "sp_spin_kick"]
+    },
+    "storm": {
+      "label": "Tempête",
+      "hint": "Foudre à distance, pas éclair",
+      "archetype": "Zoneur",
+      "tags": ["À distance", "Téléportation", "Invincible"],
+      "poses": ["sp_sky_call", "pj_lightning"]
+    },
+    "drunken": {
+      "label": "Poing ivre",
+      "hint": "Esquive titubante, gourde en cloche",
+      "archetype": "Imprévisible",
+      "tags": ["Invincible", "Projectile", "Multi-coups"],
+      "poses": ["sp_sway", "sp_lob_throw", "pj_bottle", "sp_spin_kick"]
+    },
+    "soldier": {
+      "label": "Soldat",
+      "hint": "Charge : disque tranchant, saut périlleux",
+      "archetype": "Charge",
+      "tags": ["Charge", "Projectile", "Anti-aérien"],
+      "poses": ["sp_blade_throw", "pj_disc", "sp_somersault", "sp_dash_punch"]
+    },
+    "chain": {
+      "label": "Enchaîneur",
+      "hint": "Triple frappe en trois temps, talon retourné",
+      "archetype": "Enchaînements",
+      "tags": ["Enchaînement", "Casse-garde", "Multi-coups"],
+      "poses": ["sp_dash_punch", "sp_flip_kick", "sp_palm_strike"]
+    },
+    "tiger": {
+      "label": "Tigre",
+      "hint": "Posture à quatre sorties, charge griffue",
+      "archetype": "Postures",
+      "tags": ["Posture", "Casse-garde", "Coup bas"],
+      "poses": ["sp_tiger_stance"]
+    },
+    "berserker": {
+      "label": "Berserker",
+      "hint": "Rage qui décuple les forces, charge blindée",
+      "archetype": "Bonus temporaire",
+      "tags": ["Bonus", "Armure", "Ruée"],
+      "poses": ["sp_shoulder_charge", "sp_rage"]
+    },
+    "trapper": {
+      "label": "Artificier",
+      "hint": "Mine posée au sol, grenade en cloche",
+      "archetype": "Pièges",
+      "tags": ["Piège", "Projectile", "À distance"],
+      "poses": ["sp_plant", "pj_mine", "sp_lob_throw", "pj_grenade"]
+    },
+    "mirror": {
+      "label": "Miroir",
+      "hint": "Garde qui renvoie les projectiles, éclat de lumière",
+      "archetype": "Renvoi",
+      "tags": ["Renvoi", "Projectile", "À distance"],
+      "poses": ["sp_mirror_guard", "sp_palm_strike", "pj_light", "pj_beam"]
+    },
+    "beam": {
+      "label": "Énergiste",
+      "hint": "Rayon à longue portée, déflagration anti-aérienne",
+      "archetype": "Zoneur",
+      "tags": ["Projectile", "À distance", "Anti-aérien"],
+      "poses": ["sp_energy_cast", "pj_beam", "sp_burst"]
+    },
+    "monk": {
+      "label": "Moine",
+      "hint": "Méditation qui soigne, genou anti-aérien",
+      "archetype": "Endurant",
+      "tags": ["Soin", "Anti-aérien", "Invincible"],
+      "poses": ["sp_lotus_knee", "sp_meditate", "sp_burst"]
+    },
+    "hockey": {
+      "label": "Hockeyeur",
+      "hint": "Palet au ras du sol, mise en échec, bagarre",
+      "archetype": "Bagarreur",
+      "tags": ["Projectile", "Coup bas", "Armure", "Prise"],
+      "poses": ["sp_slapshot", "pj_puck", "sp_body_check", "sp_hockey_fight"],
+      "gear": {
+        "hold": "Il garde sa crosse de hockey en main : serrée dans le poing ARRIÈRE (celui qui ne frappe pas), lame vers le bas, entière et bien visible, sans cacher le visage",
+        "poses": {
+          "idle": "posture de garde de hockeyeur : debout, genoux fléchis, buste légèrement penché vers l'avant, sa crosse de hockey tenue à deux mains devant lui (main arrière en haut du manche, main avant plus bas), lame posée au sol devant ses pieds, regard déterminé",
+          "walk1": "en train d'avancer, sa crosse de hockey tenue à deux mains devant lui, lame au ras du sol : grand pas en avant, jambe avant loin devant, jambe arrière tendue derrière",
+          "walk2": "en train d'avancer, sa crosse de hockey tenue à deux mains devant lui, lame au ras du sol : jambes croisées en plein milieu d'un pas (la jambe arrière passe devant)",
+          "crouch": "accroupi au maximum, en squat complet comme un receveur de baseball : fesses posées sur les talons, cuisses plaquées contre les mollets, genoux remontés à hauteur de la poitrine, genou de la jambe arrière qui touche presque le sol ; sa tête arrive plus bas que sa ceinture quand il est debout, et sa silhouette est presque aussi large que haute (PAS un demi-accroupi, PAS les jambes à moitié pliées, PAS le buste droit), buste penché vers l'avant, sa crosse de hockey tenue à deux mains devant lui, lame posée au sol",
+          "block": "en train de bloquer un coup : debout, sa crosse de hockey tenue à deux mains à l'horizontale devant le visage, comme une barrière, buste légèrement en retrait",
+          "crouch_block": "accroupi au maximum, en squat complet comme un receveur de baseball : fesses posées sur les talons, cuisses plaquées contre les mollets, genoux remontés à hauteur de la poitrine, genou de la jambe arrière qui touche presque le sol ; sa tête arrive plus bas que sa ceinture quand il est debout, et sa silhouette est presque aussi large que haute (PAS un demi-accroupi, PAS les jambes à moitié pliées, PAS le buste droit), en train de bloquer : sa crosse de hockey tenue à deux mains à l'horizontale devant le visage, comme une barrière, tête rentrée",
+          "super": "il se prépare à la bagarre : il vient de jeter sa crosse et ses gants, qui tombent à ses pieds ; jambes écartées, poings nus serrés et levés, il hurle",
+          "win": "pose de victoire : debout bien droit, il brandit sa crosse de hockey à bout de bras au-dessus de la tête, l'autre poing serré, grand sourire triomphant",
+          "intro": "pose d'entrée en scène avant le combat : debout bien droit, sa crosse de hockey posée sur l'épaule, l'autre main sur la hanche, regard de défi"
+        }
+      }
+    },
+    "trainer": {
+      "label": "Dresseur",
+      "hint": "Son animal de compagnie fonce, bondit et bouscule",
+      "archetype": "Invocateur",
+      "tags": ["À distance", "Casse-garde", "Multi-coups"],
+      "poses": [
+        "pj_pet_idle",
+        "sp_win_pet",
+        "sp_call_pet",
+        "pj_pet_run1",
+        "pj_pet_run2",
+        "sp_signal_jump",
+        "pj_pet_leap"
+      ],
+      "companion": {
+        "idle": "pj_pet_idle",
+        "win": "sp_win_pet"
+      }
+    },
+    "padel": {
+      "label": "Padel",
+      "hint": "Balle tendue, smash sauté, rafale de balles",
+      "archetype": "Zoneur",
+      "tags": ["Projectile", "Casse-garde", "Multi-coups"],
+      "poses": ["sp_racket_drive", "pj_padel_ball", "sp_racket_smash"]
+    },
+    "yogi": {
+      "label": "Yogi",
+      "hint": "Mandala lent, lévitation, esprit totem",
+      "archetype": "Mystique",
+      "tags": ["Projectile", "Invincible", "À distance"],
+      "poses": ["sp_mudra", "pj_mandala", "sp_levitate", "pj_spirit"]
+    },
+    "dancer": {
+      "label": "Danseuse",
+      "hint": "Pirouettes, pole dance, projecteurs du club",
+      "archetype": "Tourbillon",
+      "tags": ["Multi-coups", "Anti-aérien", "Invincible"],
+      "poses": ["sp_pirouette", "sp_pole_spin", "pj_spotlight"]
+    },
+    "lazy": {
+      "label": "Flemmard",
+      "hint": "Une-deux au ballon, flemme qui soigne",
+      "archetype": "Stratège",
+      "tags": ["Projectile", "Armure", "Soin", "Coup bas"],
+      "poses": ["sp_ball_kick", "pj_football", "sp_nonchalant"]
+    }
+  }
+}
