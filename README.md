@@ -14,8 +14,8 @@ d'image, jamais par jeu : un même sprite sert à tous les jeux.
 
 ## Usage prévu
 
-- **Personnages** (`characters/`) : pixel art 32 bits détaillé, utilisés par Fighting Friends et par les
-  futurs jeux qui reprennent ces personnages.
+- **Personnages** (`characters/`) : pixel art 32 bits détaillé, utilisés par Fighting Friends, Foot Friends
+  (foot en un contre un) et les futurs jeux qui reprennent ces personnages.
 - **Objets de décor** (`props/`, à venir) : ceux de DKK (arbres, barils, barrières…), pour être réutilisés
   par d'autres jeux. Les personnages de DKK, eux, restent dans DKK.
 

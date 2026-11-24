@@ -1,0 +1,18 @@
+{
+  "game": "foot-friends",
+  "label": "Foot Friends",
+  "common": [
+    "idle",
+    "portrait",
+    "walk1",
+    "walk2",
+    "jump",
+    "punch_light",
+    "kick_light",
+    "kick_heavy",
+    "jump_punch",
+    "jump_kick",
+    "hit",
+    "win"
+  ]
+}
