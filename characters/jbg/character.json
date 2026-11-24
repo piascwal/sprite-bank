@@ -1,0 +1,38 @@
+{
+  "id": "jbg",
+  "name": "JBG",
+  "style": "balanced",
+  "color": "#0000ff",
+  "size": 1,
+  "title": "Nouveau challenger",
+  "quote": "À qui le tour ?",
+  "files": {
+    "idle": "idle.webp",
+    "portrait": "portrait.webp",
+    "stage": "stage.webp",
+    "jump": "jump.webp"
+  },
+  "adjust": {
+    "idle": {
+      "s": 1.03,
+      "dx": 3,
+      "dy": 0
+    },
+    "portrait": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "stage": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "jump": {
+      "s": 1.11,
+      "dx": 1,
+      "dy": 0
+    }
+  },
+  "updated": 1795537949830
+}

@@ -100,10 +100,13 @@ export function resetAdjust(charId: string, key: SpriteKey): void {
   void saveAdjust(charId, key);
 }
 
-/** Les changements à envoyer d'un personnage de la banque (aucun pour un personnage local). */
+/**
+ * Les changements à envoyer d'un personnage : ses images importées sur l'appareil, et les réglages modifiés
+ * sur ses images de la banque. Un personnage pas encore dans la banque a toutes ses images à envoyer.
+ */
 export function pendingChanges(charId: string): PendingChange[] {
-  if (!hasRepoLayer(charId)) return [];
   const changes: PendingChange[] = localEntries(charId).map(([key]) => ({ key, kind: 'image' }));
+  if (!hasRepoLayer(charId)) return changes;
   // les réglages sont lus dans le stockage : pas besoin que les images de la banque soient chargées
   const images = new Set(changes.map((c) => c.key));
   for (const key of Object.keys(storedAdjust(charId)) as SpriteKey[]) {

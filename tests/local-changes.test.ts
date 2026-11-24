@@ -63,9 +63,9 @@ describe('changements locaux', () => {
     expect(pendingChanges(ID)).toEqual([]);
   });
 
-  it("un personnage créé sur l'appareil n'a pas de changements (il s'exporte en entier)", () => {
+  it("un personnage créé sur l'appareil a toutes ses images à envoyer (il s'exporte en entier)", () => {
     putSprite('local-only', 'idle', img(), 'local', { at: 5 });
-    expect(pendingChanges('local-only')).toEqual([]);
+    expect(pendingChanges('local-only')).toEqual([{ key: 'idle', kind: 'image' }]);
   });
 
   it('un réglage modifié sur une image du jeu est enregistré et marqué à envoyer', async () => {

@@ -251,7 +251,12 @@ function gamesHtml(char: Character): string {
 
 /** Liste des changements faits sur cet appareil à un personnage de la banque. */
 function changesHtml(char: Character): string {
-  if (!hasRepoLayer(char.id)) return '';
+  if (!hasRepoLayer(char.id)) {
+    const count = pendingChanges(char.id).length;
+    return count
+      ? `<div class="changes"><b>✎ Nouveau personnage, pas encore dans la banque</b> : ${count} image${count > 1 ? 's' : ''} à envoyer. Fais EXPORTER .ZIP (ou EXPORT EN MASSE) et envoie le fichier.</div>`
+      : '<div class="changes">Nouveau personnage : importe au moins sa garde, puis EXPORTER .ZIP pour l’envoyer.</div>';
+  }
   const changes = pendingChanges(char.id);
   if (!changes.length)
     return '<div class="changes">Aucun changement par rapport à la version de la banque.</div>';
