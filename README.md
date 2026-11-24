@@ -11,6 +11,13 @@ Banque de sprites partagée entre les jeux : les images des personnages, rangée
   donc aucun jeu déjà publié, et un jeu ne reçoit les nouveautés qu'à sa prochaine construction.
 - Une pose générée une fois sert à tous les jeux de la même collection.
 
+## Usage prévu
+
+- **Personnages** : la collection `fighting-friends` sert à Fighting Friends et aux futurs jeux qui
+  reprennent ses personnages (même direction artistique).
+- **Objets de décor** (à venir) : ceux de DKK (arbres, barils, barrières…), dans une collection à part, pour
+  être réutilisés par d'autres jeux. Les personnages de DKK, eux, restent dans DKK.
+
 ## Contenu
 
 ```
