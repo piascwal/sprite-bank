@@ -1,0 +1,36 @@
+# À chaque changement sur main : vérifie la banque, puis pose la version suivante (v1.0, v1.1…).
+# Le numéro majeur vient de format.json : il ne change que si le format des fichiers change et casserait
+# les jeux. Les jeux prennent « la dernière v1 » : les ajouts leur arrivent à leur prochaine construction.
+name: Vérifier et versionner
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: version
+  cancel-in-progress: false
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/validate.mjs
+      - name: Poser la version suivante
+        run: |
+          major=$(node -p "require('./format.json').major")
+          if git tag --points-at HEAD | grep -q "^v${major}\."; then
+            echo "Ce commit a déjà sa version : $(git tag --points-at HEAD)"
+            exit 0
+          fi
+          last=$(git tag -l "v${major}.*" | sed "s/^v${major}\.//" | grep -E '^[0-9]+$' | sort -n | tail -1)
+          next="v${major}.$(( ${last:--1} + 1 ))"
+          git tag "$next"
+          git push origin "$next"
+          echo "Nouvelle version : $next" >> "$GITHUB_STEP_SUMMARY"

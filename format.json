@@ -1,0 +1,4 @@
+{
+  "major": 1,
+  "description": "Version du format des fichiers. À augmenter uniquement pour un changement qui casserait les jeux (structure des dossiers, champs de character.json renommés…)."
+}
