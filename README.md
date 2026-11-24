@@ -30,6 +30,7 @@ games/<jeu>.json             besoins d'un jeu : poses communes, poses et accesso
                              (publié par le jeu lui-même, ex. `npm run needs` dans Fighting Friends)
 format.json                  version du format des fichiers (numéro majeur des versions)
 scripts/validate.mjs         vérification des images et des fiches (lancée avant chaque version)
+scripts/copy-for-game.mjs    copie dans un jeu des seules images qu'il demande
 src/                         l'atelier (catalogue des poses, prompts, mannequins guides, import, export)
 tests/                       le catalogue couvre bien les besoins de chaque jeu
 ```
@@ -54,15 +55,23 @@ range dans `characters/` (les dossiers ne portent plus le nom d'un jeu).
 
 ## Utiliser la banque dans un jeu
 
-Le jeu déclare le dossier et la version qu'il veut (exemple de Fighting Friends, `sprites.json`) :
+Le jeu déclare la version qu'il veut et son nom de jeu (exemple de Fighting Friends, `sprites.json`) :
 
 ```json
-{ "repo": "https://github.com/piascwal/sprite-bank", "path": "characters", "version": "v2" }
+{ "repo": "https://github.com/piascwal/sprite-bank", "game": "fighting-friends", "version": "v2" }
 ```
 
 Un script de construction (`npm run sprites` dans Fighting Friends) trouve le tag correspondant
-(`v2` = le plus récent des `v2.x`), le télécharge et copie le dossier demandé dans le jeu. Le dossier copié
-n'est pas versionné dans le dépôt du jeu : il est refait à chaque construction.
+(`v2` = le plus récent des `v2.x`), le télécharge, puis lance le script de la banque de cette version :
+
+```bash
+node scripts/copy-for-game.mjs <jeu> <dossier de destination>
+```
+
+Il ne copie que les images **demandées par ce jeu** (`games/<jeu>.json`) : pour chaque personnage, les poses
+communes du jeu, plus celles de son style. Un jeu qui ne demande que les portraits ne reçoit que les
+portraits. Les fiches copiées ne citent que ces images. Le dossier copié n'est pas versionné dans le dépôt
+du jeu : il est refait à chaque construction.
 
 ## L'atelier
 
