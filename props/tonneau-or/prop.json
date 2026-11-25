@@ -1,0 +1,10 @@
+{
+  "id": "tonneau-or",
+  "name": "Tonneau doré",
+  "category": "caisses",
+  "width": 16,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/tuiles/tonneau-or-base.png"
+}

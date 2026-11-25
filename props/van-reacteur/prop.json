@@ -1,0 +1,10 @@
+{
+  "id": "van-reacteur",
+  "name": "Van à réacteur",
+  "category": "véhicules",
+  "width": 56,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/van-reacteur-base.png"
+}

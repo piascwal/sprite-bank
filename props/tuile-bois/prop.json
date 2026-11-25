@@ -1,0 +1,10 @@
+{
+  "id": "tuile-bois",
+  "name": "Planche de bois",
+  "category": "caisses",
+  "width": 16,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/tuiles/bois-base.png"
+}

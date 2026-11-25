@@ -1,0 +1,10 @@
+{
+  "id": "arme-boitier-cd",
+  "name": "Arme : boîtier de cd",
+  "category": "bonus",
+  "width": 20,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/armes/boitier-cd-base.png"
+}

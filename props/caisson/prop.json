@@ -1,0 +1,10 @@
+{
+  "id": "caisson",
+  "name": "Caisson explosif",
+  "category": "caisses",
+  "width": 16,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/tuiles/caisson-base.png"
+}

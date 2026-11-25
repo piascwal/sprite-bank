@@ -1,0 +1,10 @@
+{
+  "id": "arme-pile",
+  "name": "Arme : pile",
+  "category": "bonus",
+  "width": 14,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/armes/pile-base.png"
+}

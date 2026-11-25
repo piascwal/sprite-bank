@@ -12,6 +12,8 @@ interface Prop {
   width: number;
   files: string[];
   source?: string;
+  /** Précision : ce que montre chaque variante, ou une taille estimée. */
+  note?: string;
 }
 
 const PROPS_DIR = 'props/';
@@ -81,6 +83,7 @@ function showDetail(prop: Prop): void {
     `<div class="propVariants">${images}</div>` +
     `<p>Catégorie : <b>${escapeHtml(prop.category)}</b> · largeur relative : <b>${prop.width}</b>` +
     (prop.source ? ` · origine : <code>${escapeHtml(prop.source)}</code>` : '') +
+    (prop.note ? `<br>${escapeHtml(prop.note)}` : '') +
     `</p><button class="nav sm alt" id="propClose">FERMER</button>`;
   $('#propDetail').classList.remove('hidden');
   $('#propDetail').scrollIntoView({ behavior: 'smooth' });

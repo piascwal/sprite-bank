@@ -1,0 +1,10 @@
+{
+  "id": "caisson-rose",
+  "name": "Caisson explosif rose",
+  "category": "caisses",
+  "width": 16,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/tuiles/caisson-rose-base.png"
+}

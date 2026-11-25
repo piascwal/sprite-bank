@@ -1,0 +1,10 @@
+{
+  "id": "arme-minidisc",
+  "name": "Arme : minidisc",
+  "category": "bonus",
+  "width": 15,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/armes/minidisc-base.png"
+}

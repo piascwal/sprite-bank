@@ -1,0 +1,13 @@
+{
+  "id": "teleporteur",
+  "name": "Téléporteur",
+  "category": "attractions",
+  "width": 56,
+  "files": [
+    "1.png",
+    "2.png",
+    "3.png"
+  ],
+  "source": "dkk-rock : public/sprites/teleporteur.png",
+  "note": "Variantes : 1 éteint, 2 cadre (le rond est transparent), 3 tourbillon (tourne derrière le cadre)."
+}

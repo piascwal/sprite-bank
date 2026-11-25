@@ -1,0 +1,10 @@
+{
+  "id": "caisse",
+  "name": "Caisse",
+  "category": "caisses",
+  "width": 16,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/tuiles/caisse-base.png"
+}

@@ -3,6 +3,10 @@
   "name": "Half-pipe",
   "category": "festival",
   "width": 150,
-  "files": ["image.png"],
-  "source": "dkk-rock : assets-sources/decor/fise/halfpipe-rogne-base.png"
+  "files": [
+    "image.png",
+    "complet.png"
+  ],
+  "source": "dkk-rock : assets-sources/decor/fise/halfpipe-rogne-base.png",
+  "note": "Variantes : image.png rognée (celle de DKK), complet.png entière."
 }

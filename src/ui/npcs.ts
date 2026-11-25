@@ -24,6 +24,8 @@ interface Npc {
   width?: number;
   variants: Variant[];
   source?: string;
+  /** Précision : une taille estimée, par exemple. */
+  note?: string;
 }
 
 const NPCS_DIR = 'npcs/';
@@ -143,6 +145,7 @@ function showDetail(npc: Npc): void {
     `<h3>${escapeHtml(npc.name)} <small>(${escapeHtml(npc.id)})</small></h3>${blocks.join('')}` +
     `<p>Catégorie : <b>${escapeHtml(npc.category)}</b> · ${sizeLabel(npc)}` +
     (npc.source ? ` · origine : <code>${escapeHtml(npc.source)}</code>` : '') +
+    (npc.note ? `<br>${escapeHtml(npc.note)}` : '') +
     `</p><button class="nav sm alt" id="npcClose">FERMER</button>`;
   npc.variants.forEach((v, i) => {
     if (!v.animation) return;

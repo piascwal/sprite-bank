@@ -1,0 +1,12 @@
+{
+  "id": "cage",
+  "name": "Cage",
+  "category": "objets",
+  "width": 22,
+  "files": [
+    "1.png",
+    "2.png"
+  ],
+  "source": "dkk-rock : assets-sources/cage-1-base.png",
+  "note": "Variantes : 1 fermée, 2 ouverte."
+}

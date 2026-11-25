@@ -1,0 +1,10 @@
+{
+  "id": "arme-frisbee",
+  "name": "Arme : frisbee",
+  "category": "bonus",
+  "width": 16,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/armes/frisbee-base.png"
+}

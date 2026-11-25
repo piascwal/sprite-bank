@@ -1,0 +1,10 @@
+{
+  "id": "van",
+  "name": "Van",
+  "category": "véhicules",
+  "width": 56,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/van-base.png"
+}

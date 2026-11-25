@@ -1,0 +1,10 @@
+{
+  "id": "tonneau-wog",
+  "name": "Tonneau WOG",
+  "category": "caisses",
+  "width": 16,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/tuiles/tonneau-wog-base.png"
+}

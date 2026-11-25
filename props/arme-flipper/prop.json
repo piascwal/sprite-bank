@@ -1,0 +1,10 @@
+{
+  "id": "arme-flipper",
+  "name": "Arme : flipper",
+  "category": "bonus",
+  "width": 16,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/armes/flipper-base.png"
+}

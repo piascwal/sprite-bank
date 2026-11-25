@@ -1,0 +1,10 @@
+{
+  "id": "trampoline-metal",
+  "name": "Trampoline en métal",
+  "category": "attractions",
+  "width": 18,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : public/sprites/trampoline-metal.png"
+}

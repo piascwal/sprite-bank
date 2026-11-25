@@ -1,0 +1,11 @@
+{
+  "id": "carte-sibylle",
+  "name": "Carte Sibylle",
+  "category": "bonus",
+  "width": 8,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/decor/carte-sibylle-base.png",
+  "note": "Largeur estimée (la carte est dessinée à part dans DKK)."
+}

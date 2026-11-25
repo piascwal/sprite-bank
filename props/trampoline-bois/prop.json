@@ -1,0 +1,10 @@
+{
+  "id": "trampoline-bois",
+  "name": "Trampoline en bois",
+  "category": "attractions",
+  "width": 18,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : public/sprites/trampoline-bois.png"
+}

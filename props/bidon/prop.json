@@ -1,0 +1,11 @@
+{
+  "id": "bidon",
+  "name": "Bidon",
+  "category": "objets",
+  "width": 11,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : assets-sources/decor/bidon-base.png",
+  "note": "Largeur estimée (objet non utilisé dans DKK)."
+}

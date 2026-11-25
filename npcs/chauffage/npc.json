@@ -1,0 +1,13 @@
+{
+  "id": "chauffage",
+  "name": "Chauffage soufflant",
+  "category": "ennemis",
+  "height": 26,
+  "variants": [
+    {
+      "image": "1.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/chauffage/chauffage-base.png",
+  "note": "Hauteur estimée d’après sa planche dans DKK (227 × 308, densité 6, échelle 0,5)."
+}

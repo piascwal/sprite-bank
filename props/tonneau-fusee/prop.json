@@ -1,0 +1,10 @@
+{
+  "id": "tonneau-fusee",
+  "name": "Tonneau-fusée",
+  "category": "attractions",
+  "width": 15,
+  "files": [
+    "image.png"
+  ],
+  "source": "dkk-rock : public/sprites/tonneau-metal.png (détouré de assets-sources/decor/attractions/tonneau-metal.jpg)"
+}
