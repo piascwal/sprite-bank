@@ -1,0 +1,15 @@
+{
+  "id": "champion",
+  "name": "Champion",
+  "category": "boss",
+  "height": 40,
+  "variants": [
+    {
+      "image": "1.png"
+    },
+    {
+      "image": "2.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/champion-1-base.png"
+}

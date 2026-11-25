@@ -1,0 +1,18 @@
+{
+  "id": "drone",
+  "name": "Drone",
+  "category": "ennemis",
+  "height": 22,
+  "variants": [
+    {
+      "image": "1.png"
+    },
+    {
+      "image": "2.png"
+    },
+    {
+      "image": "3.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/drone-1-base.png"
+}

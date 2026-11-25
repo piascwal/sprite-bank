@@ -1385,3 +1385,31 @@ body.netfight #pauseBtn {
   padding: 8px 12px;
   margin-bottom: 12px;
 }
+
+/* ennemis : première image d'une planche d'animation, quand il n'y a pas d'image source */
+.npcFrame {
+  display: block;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  image-rendering: pixelated;
+}
+.propVariants canvas {
+  width: 140px;
+  height: 140px;
+  background: var(--pn);
+  image-rendering: pixelated;
+}
+#npcDetail {
+  background: var(--pn);
+  border-left: 4px solid var(--y);
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+#tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+#tabs .nav {
+  flex: none;
+}

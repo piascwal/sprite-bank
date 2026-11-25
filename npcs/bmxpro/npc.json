@@ -1,0 +1,15 @@
+{
+  "id": "bmxpro",
+  "name": "Pro du BMX",
+  "category": "ennemis",
+  "height": 21,
+  "variants": [
+    {
+      "image": "1.png"
+    },
+    {
+      "image": "2.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/bmxpro-1-base.png"
+}

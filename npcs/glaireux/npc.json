@@ -1,0 +1,44 @@
+{
+  "id": "glaireux",
+  "name": "Glaireux",
+  "category": "ennemis",
+  "height": 20,
+  "variants": [
+    {
+      "image": "1.png",
+      "animation": {
+        "sheet": "1-anim.png",
+        "frameWidth": 117,
+        "frameHeight": 136,
+        "animations": [
+          {
+            "name": "repos",
+            "row": 0,
+            "frames": 4,
+            "fps": 4
+          },
+          {
+            "name": "marche",
+            "row": 1,
+            "frames": 8,
+            "fps": 10
+          },
+          {
+            "name": "attaque",
+            "row": 2,
+            "frames": 5,
+            "fps": 10
+          },
+          {
+            "name": "touche",
+            "row": 3,
+            "frames": 3,
+            "fps": 8
+          }
+        ],
+        "regard": "face"
+      }
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/glaireux-1-anim.json"
+}

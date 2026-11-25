@@ -1,0 +1,25 @@
+{
+  "id": "gardien",
+  "name": "Gardien",
+  "category": "ennemis",
+  "height": 22,
+  "variants": [
+    {
+      "animation": {
+        "sheet": "1-anim.png",
+        "frameWidth": 88,
+        "frameHeight": 88,
+        "animations": [
+          {
+            "name": "marche",
+            "row": 0,
+            "frames": 6,
+            "fps": 8
+          }
+        ],
+        "regard": "droite"
+      }
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/gardien-1-anim.json"
+}

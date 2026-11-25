@@ -1,0 +1,149 @@
+{
+  "id": "fetard",
+  "name": "Fêtard",
+  "category": "ennemis",
+  "height": 20,
+  "variants": [
+    {
+      "image": "1.png",
+      "animation": {
+        "sheet": "1-anim.png",
+        "frameWidth": 97,
+        "frameHeight": 120,
+        "animations": [
+          {
+            "name": "repos",
+            "row": 0,
+            "frames": 4,
+            "fps": 4
+          },
+          {
+            "name": "marche",
+            "row": 1,
+            "frames": 8,
+            "fps": 10
+          },
+          {
+            "name": "attaque",
+            "row": 2,
+            "frames": 5,
+            "fps": 10
+          },
+          {
+            "name": "touche",
+            "row": 3,
+            "frames": 3,
+            "fps": 8
+          }
+        ],
+        "regard": "face"
+      }
+    },
+    {
+      "image": "2.png",
+      "animation": {
+        "sheet": "2-anim.png",
+        "frameWidth": 75,
+        "frameHeight": 120,
+        "animations": [
+          {
+            "name": "repos",
+            "row": 0,
+            "frames": 4,
+            "fps": 4
+          },
+          {
+            "name": "marche",
+            "row": 1,
+            "frames": 8,
+            "fps": 10
+          },
+          {
+            "name": "attaque",
+            "row": 2,
+            "frames": 5,
+            "fps": 10
+          },
+          {
+            "name": "touche",
+            "row": 3,
+            "frames": 3,
+            "fps": 8
+          }
+        ],
+        "regard": "face"
+      }
+    },
+    {
+      "image": "3.png",
+      "animation": {
+        "sheet": "3-anim.png",
+        "frameWidth": 71,
+        "frameHeight": 121,
+        "animations": [
+          {
+            "name": "repos",
+            "row": 0,
+            "frames": 4,
+            "fps": 4
+          },
+          {
+            "name": "marche",
+            "row": 1,
+            "frames": 8,
+            "fps": 10
+          },
+          {
+            "name": "attaque",
+            "row": 2,
+            "frames": 5,
+            "fps": 10
+          },
+          {
+            "name": "touche",
+            "row": 3,
+            "frames": 3,
+            "fps": 8
+          }
+        ],
+        "regard": "face"
+      }
+    },
+    {
+      "image": "4.png",
+      "animation": {
+        "sheet": "4-anim.png",
+        "frameWidth": 97,
+        "frameHeight": 120,
+        "animations": [
+          {
+            "name": "repos",
+            "row": 0,
+            "frames": 4,
+            "fps": 4
+          },
+          {
+            "name": "marche",
+            "row": 1,
+            "frames": 8,
+            "fps": 10
+          },
+          {
+            "name": "attaque",
+            "row": 2,
+            "frames": 5,
+            "fps": 10
+          },
+          {
+            "name": "touche",
+            "row": 3,
+            "frames": 3,
+            "fps": 8
+          }
+        ],
+        "regard": "face"
+      }
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/fetard-1-anim.json"
+}

@@ -9,5 +9,6 @@
 - Une nouvelle pose s'ajoute au catalogue (`src/catalog/`) avec sa description pour le prompt ; le test
   `tests/catalog.test.ts` vérifie que chaque pose demandée par un jeu y figure.
 - Un nouveau personnage s'ajoute à `characters/index.json` ; un nouvel objet de décor à `props/index.json`, avec
-  sa fiche `prop.json` (nom, catégorie, largeur relative, images).
+  sa fiche `prop.json` (nom, catégorie, largeur relative, images) ; un nouvel ennemi ou PNJ à `npcs/index.json`,
+  avec sa fiche `npc.json` (nom, catégorie, hauteur ou largeur, variantes avec image et/ou animation).
 - Textes et commentaires en français.

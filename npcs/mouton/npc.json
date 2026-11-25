@@ -1,0 +1,15 @@
+{
+  "id": "mouton",
+  "name": "Mouton",
+  "category": "animaux",
+  "height": 13,
+  "variants": [
+    {
+      "image": "1.png"
+    },
+    {
+      "image": "2.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/mouton-1-base.png"
+}

@@ -3,7 +3,13 @@ import { existsSync, mkdtempSync, readFileSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { copyForGame, copyForNeeds, copyPropsForNeeds } from '../scripts/copy-for-game.mjs';
+import {
+  copyForGame,
+  copyForNeeds,
+  copyNpcsForNeeds,
+  copyPropsForNeeds,
+  npcFiles,
+} from '../scripts/copy-for-game.mjs';
 
 const tmp = () => mkdtempSync(join(tmpdir(), 'copie-'));
 const read = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
@@ -62,5 +68,20 @@ describe('copie pour un jeu', () => {
   it('sans objets demandés, aucun objet de décor', () => {
     const dest = tmp();
     expect(copyPropsForNeeds({ game: 'g', label: 'G', common: [] }, dest).props).toBe(0);
+  });
+
+  it('un jeu qui demande les boss reçoit leurs images et planches d’animation, et rien d’autre', () => {
+    const dest = tmp();
+    const { npcs } = copyNpcsForNeeds({ game: 'g', label: 'G', common: [], npcs: ['boss', 'fetard'] }, dest);
+    const ids = read(join(dest, 'index.json')) as string[];
+    expect(npcs).toBe(ids.length);
+    expect(ids).toContain('dj');
+    expect(ids).toContain('fetard');
+    expect(ids).not.toContain('pigeon');
+    for (const id of ids) {
+      for (const name of npcFiles(read(join(dest, id, 'npc.json')))) {
+        expect(existsSync(join(dest, id, name)), `${id}/${name}`).toBe(true);
+      }
+    }
   });
 });

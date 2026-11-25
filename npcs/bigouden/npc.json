@@ -1,0 +1,18 @@
+{
+  "id": "bigouden",
+  "name": "Bigoudène",
+  "category": "ennemis",
+  "height": 24,
+  "variants": [
+    {
+      "image": "1.png"
+    },
+    {
+      "image": "2.png"
+    },
+    {
+      "image": "3.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/bigouden-1-base.png"
+}

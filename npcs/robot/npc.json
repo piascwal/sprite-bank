@@ -1,0 +1,12 @@
+{
+  "id": "robot",
+  "name": "Robot",
+  "category": "boss",
+  "width": 26,
+  "variants": [
+    {
+      "image": "1.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/robot-base.png"
+}

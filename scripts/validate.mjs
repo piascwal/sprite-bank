@@ -2,7 +2,9 @@
    - personnages (characters/) : index.json liste des personnages qui existent, chaque fiche character.json
      est lisible et chaque image qu'elle cite est présente (et inversement) ;
    - objets de décor (props/) : index.json liste des objets qui existent, chaque fiche prop.json a un nom,
-     une catégorie, une largeur et des images présentes.
+     une catégorie, une largeur et des images présentes ;
+   - ennemis, PNJ et boss (npcs/) : de même, avec une hauteur ou une largeur, et pour chaque variante une
+     image source ou une planche d'animation (dont la description tient dans la planche).
    Sans dépendance : node scripts/validate.mjs */
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
@@ -10,6 +12,7 @@ import { join } from 'node:path';
 const ROOT = new URL('..', import.meta.url).pathname;
 const CHARACTERS = join(ROOT, 'characters');
 const PROPS = join(ROOT, 'props');
+const NPCS = join(ROOT, 'npcs');
 /** Images acceptées dans un dossier de personnage. */
 const IMAGE = /\.(webp|png|jpe?g)$/i;
 /** Au-delà, une image est probablement restée en grand format par erreur (octets). */
@@ -84,6 +87,42 @@ if (existsSync(PROPS)) {
     if (new Set(props).size !== props.length) errors.push('identifiant en double dans props/index.json');
     for (const id of props) checkProp(id);
     console.log(`props : ${props.length} objets de décor`);
+  }
+}
+
+function checkNpc(id) {
+  const dir = join(NPCS, id);
+  if (!existsSync(dir)) return errors.push(`PNJ ${id} : listé dans npcs/index.json mais dossier absent`);
+  const npc = readJson(join(dir, 'npc.json'));
+  if (!npc) return;
+  if (npc.id !== id) errors.push(`PNJ ${id} : npc.json annonce l'id « ${npc.id} »`);
+  if (!npc.name || !npc.category) errors.push(`PNJ ${id} : nom ou catégorie manquant`);
+  if (!(npc.height > 0) && !(npc.width > 0)) errors.push(`PNJ ${id} : ni hauteur ni largeur`);
+  if (!Array.isArray(npc.variants) || !npc.variants.length) return errors.push(`PNJ ${id} : aucune variante`);
+  const cited = new Set();
+  npc.variants.forEach((v, i) => {
+    if (!v.image && !v.animation) errors.push(`PNJ ${id} : variante ${i + 1} sans image`);
+    for (const name of [v.image, v.animation?.sheet].filter(Boolean)) {
+      cited.add(name);
+      if (!existsSync(join(dir, name))) errors.push(`PNJ ${id} : image citée absente : ${name}`);
+    }
+    const a = v.animation;
+    if (a && !(a.frameWidth > 0 && a.frameHeight > 0 && Array.isArray(a.animations) && a.animations.length))
+      errors.push(`PNJ ${id} : animation de la variante ${i + 1} mal décrite`);
+  });
+  for (const name of readdirSync(dir)) {
+    if (IMAGE.test(name) && !cited.has(name))
+      warnings.push(`PNJ ${id} : image non citée dans npc.json : ${name}`);
+  }
+}
+
+if (existsSync(NPCS)) {
+  const npcs = readJson(join(NPCS, 'index.json'));
+  if (!Array.isArray(npcs)) errors.push('npcs/index.json doit être une liste d’identifiants');
+  else {
+    if (new Set(npcs).size !== npcs.length) errors.push('identifiant en double dans npcs/index.json');
+    for (const id of npcs) checkNpc(id);
+    console.log(`npcs : ${npcs.length} ennemis, PNJ et boss`);
   }
 }
 

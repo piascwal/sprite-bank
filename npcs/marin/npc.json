@@ -1,0 +1,15 @@
+{
+  "id": "marin",
+  "name": "Marin",
+  "category": "ennemis",
+  "height": 22,
+  "variants": [
+    {
+      "image": "1.png"
+    },
+    {
+      "image": "2.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/marin-1-base.png"
+}

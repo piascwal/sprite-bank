@@ -1,0 +1,12 @@
+{
+  "id": "roller",
+  "name": "Roller",
+  "category": "ennemis",
+  "height": 22,
+  "variants": [
+    {
+      "image": "1.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/roller-1-base.png"
+}

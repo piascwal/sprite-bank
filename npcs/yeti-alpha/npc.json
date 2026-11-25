@@ -1,0 +1,27 @@
+{
+  "id": "yeti-alpha",
+  "name": "Yéti Alpha",
+  "category": "boss",
+  "width": 46,
+  "variants": [
+    {
+      "image": "1.png"
+    },
+    {
+      "image": "2.png"
+    },
+    {
+      "image": "3.png"
+    },
+    {
+      "image": "4.png"
+    },
+    {
+      "image": "5.png"
+    },
+    {
+      "image": "6.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/boss/yeti-alpha-1-base.png"
+}

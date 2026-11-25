@@ -1,0 +1,25 @@
+{
+  "id": "hockeyeur",
+  "name": "Hockeyeur",
+  "category": "ennemis",
+  "height": 19,
+  "variants": [
+    {
+      "animation": {
+        "sheet": "1-anim.png",
+        "frameWidth": 97,
+        "frameHeight": 95,
+        "animations": [
+          {
+            "name": "marche",
+            "row": 0,
+            "frames": 8,
+            "fps": 10
+          }
+        ],
+        "regard": "face"
+      }
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/hockeyeur-1-anim.json"
+}

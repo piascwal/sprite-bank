@@ -17,7 +17,9 @@ d'image, jamais par jeu : un même sprite sert à tous les jeux.
 - **Personnages** (`characters/`) : pixel art 32 bits détaillé, utilisés par Fighting Friends, Foot Friends
   (foot en un contre un) et les futurs jeux qui reprennent ces personnages.
 - **Objets de décor** (`props/`) : ceux de DKK (arbres, barils, barrières, stands du festival…), pour être
-  réutilisés par d'autres jeux. Les personnages de DKK, eux, restent dans DKK.
+  réutilisés par d'autres jeux. Les héros de DKK, eux, restent dans DKK.
+- **Ennemis, PNJ et boss** (`npcs/`) : ceux de DKK (fêtards, videurs, yétis, pigeons, DJ Boucle…), avec leurs
+  planches d'animation.
 
 ## Contenu
 
@@ -30,6 +32,11 @@ props/                       objets de décor (images sources de DKK), un dossie
   index.json                 liste des identifiants
   <id>/prop.json             fiche : nom, catégorie, largeur relative, images (variantes), origine
   <id>/<n>.png               une image par variante (fond transparent)
+npcs/                        ennemis, PNJ et boss (images sources de DKK), un dossier par famille
+  index.json                 liste des identifiants
+  <id>/npc.json              fiche : nom, catégorie, taille relative, variantes (image, animation), origine
+  <id>/<n>.png               image source d'une variante
+  <id>/<n>-anim.png          sa planche d'animation (décrite dans npc.json : taille d'une image, lignes, vitesse)
 games/<jeu>.json             besoins d'un jeu : poses communes, poses et accessoire de chaque style
                              (publié par le jeu lui-même, ex. `npm run needs` dans Fighting Friends)
 format.json                  version du format des fichiers (numéro majeur des versions)
@@ -100,6 +107,18 @@ Les objets de DKK sont rangés par famille (`props/<id>/`), avec leurs variantes
 jeu : chaque jeu les met à sa taille. La **largeur** de chaque fiche est relative, reprise de DKK : un
 personnage y mesure environ 21 unités de haut, une vache 19 de large, une voiture 59. Elle garde les objets
 à la bonne échelle les uns par rapport aux autres. L'onglet **Objets de décor** de l'atelier les montre.
+
+## Ennemis, PNJ et boss
+
+Les ennemis de DKK sont rangés par famille (`npcs/<id>/`), une variante par apparence (fêtard 1 à 16, pigeon
+1 à 4…). Chaque variante a son image **source** (`<n>.png`) et, quand DKK l'a animée, sa **planche
+d'animation** (`<n>-anim.png`). Sa description (dans `npc.json`, champ `animation`) donne la taille d'une
+image (`frameWidth`, `frameHeight`) et, pour chaque animation (repos, marche, attaque, touché…), sa ligne dans
+la planche, son nombre d'images et sa vitesse. La taille de la famille est relative : `height` (un héros
+mesure 20) ou, pour les grands boss, `width`. L'onglet **Ennemis & PNJ** de l'atelier les fait jouer.
+
+Un jeu les demande dans ses besoins (`"npcs": ["boss", "fetard"]`, ou `"*"`), et `copy-for-game.mjs` les
+copie dans un 4e dossier.
 
 ## Une nouvelle pose pour un jeu
 

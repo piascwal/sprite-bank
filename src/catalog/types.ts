@@ -35,6 +35,8 @@ export interface GameNeeds {
   styles?: Record<StyleId, GameStyle>;
   /** Objets de décor demandés (props/) : identifiants, catégories, ou « * » pour tous. */
   props?: string[];
+  /** Ennemis, PNJ et boss demandés (npcs/) : identifiants, catégories, ou « * » pour tous. */
+  npcs?: string[];
 }
 
 /** Apparence du pantin (mannequin guide, et vignette d'un personnage sans image). */

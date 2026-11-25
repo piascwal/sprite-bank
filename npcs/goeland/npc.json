@@ -1,0 +1,15 @@
+{
+  "id": "goeland",
+  "name": "Goéland",
+  "category": "animaux",
+  "height": 18,
+  "variants": [
+    {
+      "image": "1.png"
+    },
+    {
+      "image": "2.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/goeland-1-base.png"
+}

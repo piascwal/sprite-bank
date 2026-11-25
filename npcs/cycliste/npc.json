@@ -1,0 +1,79 @@
+{
+  "id": "cycliste",
+  "name": "Cycliste",
+  "category": "ennemis",
+  "height": 21,
+  "variants": [
+    {
+      "image": "1.png",
+      "animation": {
+        "sheet": "1-anim.png",
+        "frameWidth": 214,
+        "frameHeight": 234,
+        "animations": [
+          {
+            "name": "repos",
+            "row": 0,
+            "frames": 4,
+            "fps": 6
+          },
+          {
+            "name": "marche",
+            "row": 1,
+            "frames": 6,
+            "fps": 10
+          },
+          {
+            "name": "attaque",
+            "row": 2,
+            "frames": 4,
+            "fps": 10
+          },
+          {
+            "name": "touche",
+            "row": 3,
+            "frames": 3,
+            "fps": 8
+          }
+        ],
+        "regard": "droite"
+      }
+    },
+    {
+      "image": "2.png",
+      "animation": {
+        "sheet": "2-anim.png",
+        "frameWidth": 227,
+        "frameHeight": 234,
+        "animations": [
+          {
+            "name": "repos",
+            "row": 0,
+            "frames": 4,
+            "fps": 6
+          },
+          {
+            "name": "marche",
+            "row": 1,
+            "frames": 6,
+            "fps": 10
+          },
+          {
+            "name": "attaque",
+            "row": 2,
+            "frames": 4,
+            "fps": 10
+          },
+          {
+            "name": "touche",
+            "row": 3,
+            "frames": 3,
+            "fps": 8
+          }
+        ],
+        "regard": "droite"
+      }
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/cycliste-1-anim.json"
+}

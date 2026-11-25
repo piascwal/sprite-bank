@@ -1,0 +1,12 @@
+{
+  "id": "trottinette",
+  "name": "Trottinette",
+  "category": "ennemis",
+  "height": 22,
+  "variants": [
+    {
+      "image": "1.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/trottinette-1-base.png"
+}

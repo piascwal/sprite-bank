@@ -1,0 +1,12 @@
+{
+  "id": "castor",
+  "name": "Castor",
+  "category": "animaux",
+  "height": 12,
+  "variants": [
+    {
+      "image": "1.png"
+    }
+  ],
+  "source": "dkk-rock : assets-sources/ennemis/castor-1-base.png"
+}
