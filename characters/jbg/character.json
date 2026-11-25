@@ -7,15 +7,31 @@
   "title": "Nouveau challenger",
   "quote": "À qui le tour ?",
   "files": {
-    "idle": "idle.webp",
-    "portrait": "portrait.webp",
     "stage": "stage.webp",
-    "jump": "jump.webp"
+    "jump": "jump.webp",
+    "portrait": "portrait.webp",
+    "idle": "idle.webp",
+    "crouch": "crouch.webp",
+    "kick_heavy": "kick_heavy.webp",
+    "intro": "intro.webp",
+    "kick_light": "kick_light.webp",
+    "sp_energy_cast": "sp_energy_cast.webp",
+    "sp_rising_uppercut": "sp_rising_uppercut.webp",
+    "punch_light": "punch_light.webp",
+    "crouch_block": "crouch_block.webp",
+    "super": "super.webp",
+    "win": "win.webp",
+    "punch_heavy": "punch_heavy.webp"
   },
   "adjust": {
-    "idle": {
-      "s": 1.03,
-      "dx": 3,
+    "stage": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "jump": {
+      "s": 1.09,
+      "dx": 1,
       "dy": 0
     },
     "portrait": {
@@ -23,16 +39,84 @@
       "dx": 0,
       "dy": 0
     },
-    "stage": {
+    "idle": {
+      "s": 1.03,
+      "dx": 3,
+      "dy": 0
+    },
+    "crouch": {
+      "s": 1.21,
+      "dx": 30,
+      "dy": 0
+    },
+    "kick_heavy": {
       "s": 1,
       "dx": 0,
       "dy": 0
     },
-    "jump": {
-      "s": 1.11,
-      "dx": 1,
+    "intro": {
+      "s": 1.03,
+      "dx": 4,
+      "dy": 0
+    },
+    "kick_light": {
+      "s": 1.02,
+      "dx": 4,
+      "dy": 0
+    },
+    "sp_energy_cast": {
+      "s": 1,
+      "dx": -6,
+      "dy": 0
+    },
+    "sp_rising_uppercut": {
+      "s": 0.85,
+      "dx": -23,
+      "dy": 0
+    },
+    "punch_light": {
+      "s": 1,
+      "dx": -12,
+      "dy": 0
+    },
+    "crouch_block": {
+      "s": 1.14,
+      "dx": 31,
+      "dy": 0
+    },
+    "super": {
+      "s": 1,
+      "dx": -13,
+      "dy": 0
+    },
+    "win": {
+      "s": 1,
+      "dx": -14,
+      "dy": 0
+    },
+    "punch_heavy": {
+      "s": 1,
+      "dx": -23,
       "dy": 0
     }
   },
-  "updated": 1795537949830
+  "updated": 1795602754978,
+  "changes": {
+    "images": [
+      "crouch",
+      "kick_heavy",
+      "intro",
+      "kick_light",
+      "sp_energy_cast",
+      "sp_rising_uppercut",
+      "punch_light",
+      "crouch_block",
+      "super",
+      "win",
+      "punch_heavy"
+    ],
+    "adjust": [
+      "jump"
+    ]
+  }
 }
