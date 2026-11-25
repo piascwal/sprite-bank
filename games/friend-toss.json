@@ -1,7 +1,7 @@
 {
   "game": "friend-toss",
   "label": "Friend Toss",
-  "common": ["idle", "portrait", "jump", "fall", "hit", "down", "win", "crouch", "punch_heavy"],
+  "common": ["idle", "portrait", "jump", "fall", "hit", "down", "win"],
   "styles": {
     "lazy": {
       "label": "Flemmard",
