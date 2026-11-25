@@ -1,0 +1,8 @@
+{
+  "id": "vache",
+  "name": "Vache",
+  "category": "animaux",
+  "width": 19,
+  "files": ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png"],
+  "source": "dkk-rock : assets-sources/decor/vache-1-base.png"
+}

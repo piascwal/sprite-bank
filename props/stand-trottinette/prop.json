@@ -1,0 +1,8 @@
+{
+  "id": "stand-trottinette",
+  "name": "Stand trottinette",
+  "category": "festival",
+  "width": 55,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/stand-trottinette-base.png"
+}

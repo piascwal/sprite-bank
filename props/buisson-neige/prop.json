@@ -1,0 +1,8 @@
+{
+  "id": "buisson-neige",
+  "name": "Buisson enneigé",
+  "category": "nature",
+  "width": 24,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/buisson-neige-base.png"
+}

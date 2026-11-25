@@ -1,0 +1,8 @@
+{
+  "id": "food-glace",
+  "name": "Food truck glaces",
+  "category": "festival",
+  "width": 46,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/food-glace-base.png"
+}

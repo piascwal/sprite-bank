@@ -1,0 +1,8 @@
+{
+  "id": "figuier",
+  "name": "Figuier",
+  "category": "nature",
+  "width": 52,
+  "files": ["1.png", "2.png", "3.png"],
+  "source": "dkk-rock : assets-sources/decor/figuier-1-base.png"
+}

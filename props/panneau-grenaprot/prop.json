@@ -1,0 +1,8 @@
+{
+  "id": "panneau-grenaprot",
+  "name": "Panneau grenaprot",
+  "category": "publicité",
+  "width": 96,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/panneaux/grenaprot-base.png"
+}

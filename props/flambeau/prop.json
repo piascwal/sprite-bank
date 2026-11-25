@@ -1,0 +1,8 @@
+{
+  "id": "flambeau",
+  "name": "Flambeau",
+  "category": "objets",
+  "width": 8,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/flambeau-base.png"
+}

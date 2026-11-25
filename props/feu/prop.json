@@ -1,0 +1,8 @@
+{
+  "id": "feu",
+  "name": "Feu de camp",
+  "category": "objets",
+  "width": 14,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/feu-1-base.png"
+}

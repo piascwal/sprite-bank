@@ -1,0 +1,8 @@
+{
+  "id": "buvette",
+  "name": "Buvette",
+  "category": "festival",
+  "width": 42,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/buvette-base.png"
+}

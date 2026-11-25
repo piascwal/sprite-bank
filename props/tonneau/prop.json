@@ -1,0 +1,8 @@
+{
+  "id": "tonneau",
+  "name": "Tonneau",
+  "category": "objets",
+  "width": 13,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/tonneau-base.png"
+}

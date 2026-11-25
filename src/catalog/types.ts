@@ -33,6 +33,8 @@ export interface GameNeeds {
   common: SpriteKey[];
   /** Poses propres à un style (champ « style » du character.json). */
   styles?: Record<StyleId, GameStyle>;
+  /** Objets de décor demandés (props/) : identifiants, catégories, ou « * » pour tous. */
+  props?: string[];
 }
 
 /** Apparence du pantin (mannequin guide, et vignette d'un personnage sans image). */

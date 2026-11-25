@@ -1,0 +1,8 @@
+{
+  "id": "parasol",
+  "name": "Parasol",
+  "category": "objets",
+  "width": 28,
+  "files": ["1.png", "2.png", "3.png"],
+  "source": "dkk-rock : assets-sources/decor/parasol-1-base.png"
+}

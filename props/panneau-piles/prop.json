@@ -1,0 +1,8 @@
+{
+  "id": "panneau-piles",
+  "name": "Panneau piles",
+  "category": "publicité",
+  "width": 128,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/panneaux/piles-alca-lune-base.png"
+}

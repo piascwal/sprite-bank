@@ -1,0 +1,8 @@
+{
+  "id": "lavande",
+  "name": "Lavande",
+  "category": "nature",
+  "width": 16,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/lavande-base.png"
+}

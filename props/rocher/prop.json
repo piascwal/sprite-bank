@@ -1,0 +1,8 @@
+{
+  "id": "rocher",
+  "name": "Rocher",
+  "category": "nature",
+  "width": 30,
+  "files": ["1.png", "2.png", "3.png", "4.png"],
+  "source": "dkk-rock : assets-sources/decor/rocher-1-base.png"
+}

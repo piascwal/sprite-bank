@@ -1,0 +1,8 @@
+{
+  "id": "arbre",
+  "name": "Arbre",
+  "category": "nature",
+  "width": 34,
+  "files": ["1.png", "2.png"],
+  "source": "dkk-rock : assets-sources/decor/arbre-1-base.png"
+}

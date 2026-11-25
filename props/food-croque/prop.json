@@ -1,0 +1,8 @@
+{
+  "id": "food-croque",
+  "name": "Food truck croque",
+  "category": "festival",
+  "width": 46,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/food-croque-base.png"
+}

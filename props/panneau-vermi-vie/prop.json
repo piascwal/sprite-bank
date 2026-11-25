@@ -1,0 +1,8 @@
+{
+  "id": "panneau-vermi-vie",
+  "name": "Panneau vermi vie",
+  "category": "publicité",
+  "width": 80,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/panneaux/vermi-vie-base.png"
+}

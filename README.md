@@ -16,8 +16,8 @@ d'image, jamais par jeu : un même sprite sert à tous les jeux.
 
 - **Personnages** (`characters/`) : pixel art 32 bits détaillé, utilisés par Fighting Friends, Foot Friends
   (foot en un contre un) et les futurs jeux qui reprennent ces personnages.
-- **Objets de décor** (`props/`, à venir) : ceux de DKK (arbres, barils, barrières…), pour être réutilisés
-  par d'autres jeux. Les personnages de DKK, eux, restent dans DKK.
+- **Objets de décor** (`props/`) : ceux de DKK (arbres, barils, barrières, stands du festival…), pour être
+  réutilisés par d'autres jeux. Les personnages de DKK, eux, restent dans DKK.
 
 ## Contenu
 
@@ -26,6 +26,10 @@ characters/                  personnages, pixel art 32 bits détaillé
   index.json                 liste des identifiants, dans l'ordre d'affichage
   <id>/character.json        fiche : nom, couleur, taille, style, fichier de chaque pose, réglages
   <id>/<pose>.webp           une image par pose (fond transparent, détourée)
+props/                       objets de décor (images sources de DKK), un dossier par famille
+  index.json                 liste des identifiants
+  <id>/prop.json             fiche : nom, catégorie, largeur relative, images (variantes), origine
+  <id>/<n>.png               une image par variante (fond transparent)
 games/<jeu>.json             besoins d'un jeu : poses communes, poses et accessoire de chaque style
                              (publié par le jeu lui-même, ex. `npm run needs` dans Fighting Friends)
 format.json                  version du format des fichiers (numéro majeur des versions)
@@ -68,6 +72,9 @@ Un script de construction (`npm run sprites` dans Fighting Friends) trouve le ta
 node scripts/copy-for-game.mjs <jeu> <dossier de destination>
 ```
 
+Avec un troisième argument (`<dossier des objets de décor>`), il copie aussi les objets que le jeu demande
+dans ses besoins (`"props": ["nature", "vache"]` : identifiants, catégories, ou `"*"` pour tous).
+
 Il ne copie que les images **demandées par ce jeu** (`games/<jeu>.json`) : pour chaque personnage, les poses
 communes du jeu, plus celles de son style. Un jeu qui ne demande que les portraits ne reçoit que les
 portraits. Les fiches copiées ne citent que ces images. Le dossier copié n'est pas versionné dans le dépôt
@@ -85,6 +92,14 @@ dans `characters/` (un dossier par personnage ; un nouveau personnage s'ajoute a
 
 Une fois la banque à jour sur `main`, relancer la construction des jeux concernés (onglet **Actions** du
 dépôt du jeu, **Run workflow**) pour qu'ils récupèrent la nouvelle version.
+
+## Objets de décor
+
+Les objets de DKK sont rangés par famille (`props/<id>/`), avec leurs variantes (`1.png`, `2.png`…, ou
+`image.png` s'il n'y en a qu'une). Ce sont les images **sources** de DKK (`assets-sources/`), pas ses images de
+jeu : chaque jeu les met à sa taille. La **largeur** de chaque fiche est relative, reprise de DKK : un
+personnage y mesure environ 21 unités de haut, une vache 19 de large, une voiture 59. Elle garde les objets
+à la bonne échelle les uns par rapport aux autres. L'onglet **Objets de décor** de l'atelier les montre.
 
 ## Une nouvelle pose pour un jeu
 

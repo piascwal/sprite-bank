@@ -1,0 +1,8 @@
+{
+  "id": "fougere",
+  "name": "Fougère",
+  "category": "nature",
+  "width": 14,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fougere-base.png"
+}

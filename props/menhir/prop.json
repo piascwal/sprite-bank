@@ -1,0 +1,8 @@
+{
+  "id": "menhir",
+  "name": "Menhir",
+  "category": "nature",
+  "width": 14,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/menhir-1-base.png"
+}

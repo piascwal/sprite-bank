@@ -1,0 +1,8 @@
+{
+  "id": "toilettes",
+  "name": "Toilettes",
+  "category": "festival",
+  "width": 31,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/toilettes-base.png"
+}

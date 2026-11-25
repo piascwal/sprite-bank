@@ -1333,3 +1333,55 @@ body.netfight #pauseBtn {
   margin: 6px 0 0 18px;
   padding: 0;
 }
+
+/* onglets de l'atelier, et objets de décor */
+#tabs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  pointer-events: auto;
+  display: flex;
+  gap: 8px;
+  padding: max(8px, env(safe-area-inset-top)) 10px 6px;
+  background: #0b0618;
+}
+/* les écrans commencent sous la barre d'onglets */
+#ui .screen {
+  top: 58px;
+}
+.propGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 9px;
+  margin: 8px 0 16px;
+}
+.propCard img,
+.propVariants img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.propVariants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.propVariants figure {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+}
+.propVariants img {
+  width: 140px;
+  height: 140px;
+  background: var(--pn);
+}
+#propDetail {
+  background: var(--pn);
+  border-left: 4px solid var(--y);
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}

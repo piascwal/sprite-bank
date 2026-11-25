@@ -2,12 +2,13 @@ import { cpSync } from 'node:fs';
 import type { Plugin } from 'vite';
 import { defineConfig } from 'vitest/config';
 
-/** Le site de l'atelier embarque les images de la banque (characters/) : il les affiche telles quelles. */
+/** Le site de l'atelier embarque les images de la banque (characters/, props/) : il les affiche telles quelles. */
 const copyCharacters = (): Plugin => ({
   name: 'sb-characters',
   apply: 'build',
   closeBundle() {
     cpSync('characters', 'dist/characters', { recursive: true });
+    cpSync('props', 'dist/props', { recursive: true });
   },
 });
 

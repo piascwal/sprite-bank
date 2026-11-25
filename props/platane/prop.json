@@ -1,0 +1,8 @@
+{
+  "id": "platane",
+  "name": "Platane",
+  "category": "nature",
+  "width": 50,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/platane-1-base.png"
+}

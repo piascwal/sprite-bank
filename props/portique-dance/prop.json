@@ -1,0 +1,8 @@
+{
+  "id": "portique-dance",
+  "name": "Portique dance",
+  "category": "festival",
+  "width": 72,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/portique-dance-base.png"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "stand-fringues",
+  "name": "Stand fringues",
+  "category": "festival",
+  "width": 42,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/stand-fringues-base.png"
+}

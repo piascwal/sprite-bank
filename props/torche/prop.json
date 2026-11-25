@@ -1,0 +1,8 @@
+{
+  "id": "torche",
+  "name": "Torche de bambou",
+  "category": "objets",
+  "width": 6,
+  "files": ["1.png", "2.png", "3.png"],
+  "source": "dkk-rock : assets-sources/decor/torche-1-base.png"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "danseuse-casquette",
+  "name": "Danseuse à casquette",
+  "category": "personnes",
+  "width": 11,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/danseuse-casquette-base.png"
+}

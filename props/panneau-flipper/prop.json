@@ -1,0 +1,8 @@
+{
+  "id": "panneau-flipper",
+  "name": "Panneau flipper",
+  "category": "publicité",
+  "width": 128,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/panneaux/flipper-dauphin-base.png"
+}

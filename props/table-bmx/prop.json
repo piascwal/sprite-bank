@@ -1,0 +1,8 @@
+{
+  "id": "table-bmx",
+  "name": "Table bmx",
+  "category": "festival",
+  "width": 40,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/table-bmx-base.png"
+}

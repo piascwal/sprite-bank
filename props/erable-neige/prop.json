@@ -1,0 +1,8 @@
+{
+  "id": "erable-neige",
+  "name": "Érable enneigé",
+  "category": "nature",
+  "width": 44,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/erable-neige-base.png"
+}

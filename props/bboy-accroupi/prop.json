@@ -1,0 +1,8 @@
+{
+  "id": "bboy-accroupi",
+  "name": "B-boy accroupi",
+  "category": "personnes",
+  "width": 17,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/bboy-accroupi-base.png"
+}

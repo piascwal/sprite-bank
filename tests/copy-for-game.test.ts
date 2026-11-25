@@ -3,7 +3,7 @@ import { existsSync, mkdtempSync, readFileSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { copyForGame, copyForNeeds } from '../scripts/copy-for-game.mjs';
+import { copyForGame, copyForNeeds, copyPropsForNeeds } from '../scripts/copy-for-game.mjs';
 
 const tmp = () => mkdtempSync(join(tmpdir(), 'copie-'));
 const read = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
@@ -40,5 +40,27 @@ describe('copie pour un jeu', () => {
     const dest = tmp();
     const { copied } = copyForGame('fighting-friends', dest);
     expect(copied).toBeGreaterThan(300);
+  });
+
+  it('un jeu qui demande une catégorie d’objets de décor ne reçoit que ceux-là', () => {
+    const dest = tmp();
+    const { props } = copyPropsForNeeds(
+      { game: 'g', label: 'G', common: [], props: ['nature', 'vache'] },
+      dest,
+    );
+    const ids = read(join(dest, 'index.json')) as string[];
+    expect(props).toBe(ids.length);
+    expect(ids).toContain('sapin');
+    expect(ids).toContain('vache');
+    expect(ids).not.toContain('voiture');
+    for (const id of ids) {
+      const prop = read(join(dest, id, 'prop.json'));
+      for (const name of prop.files) expect(existsSync(join(dest, id, name)), `${id}/${name}`).toBe(true);
+    }
+  });
+
+  it('sans objets demandés, aucun objet de décor', () => {
+    const dest = tmp();
+    expect(copyPropsForNeeds({ game: 'g', label: 'G', common: [] }, dest).props).toBe(0);
   });
 });

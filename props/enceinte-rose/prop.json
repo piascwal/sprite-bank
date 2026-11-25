@@ -1,0 +1,8 @@
+{
+  "id": "enceinte-rose",
+  "name": "Enceinte rose",
+  "category": "objets",
+  "width": 20,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/enceinte-rose-base.png"
+}

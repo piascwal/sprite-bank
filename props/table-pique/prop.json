@@ -1,0 +1,8 @@
+{
+  "id": "table-pique",
+  "name": "Table pique",
+  "category": "festival",
+  "width": 40,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/table-pique-base.png"
+}

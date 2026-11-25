@@ -1,0 +1,8 @@
+{
+  "id": "food-rougail",
+  "name": "Food truck rougail",
+  "category": "festival",
+  "width": 46,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/food-rougail-base.png"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "etagere",
+  "name": "Étagère",
+  "category": "objets",
+  "width": 34,
+  "files": ["1.png", "2.png", "3.png"],
+  "source": "dkk-rock : assets-sources/decor/etagere-1-base.png"
+}

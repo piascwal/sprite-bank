@@ -1,0 +1,8 @@
+{
+  "id": "pissotiere",
+  "name": "Pissotière",
+  "category": "festival",
+  "width": 31,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/pissotiere-base.png"
+}

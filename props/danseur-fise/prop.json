@@ -1,0 +1,8 @@
+{
+  "id": "danseur-fise",
+  "name": "Danseur",
+  "category": "personnes",
+  "width": 12,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/danseur-decor-base.png"
+}

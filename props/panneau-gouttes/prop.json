@@ -1,0 +1,8 @@
+{
+  "id": "panneau-gouttes",
+  "name": "Panneau gouttes",
+  "category": "publicité",
+  "width": 112,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/panneaux/gouttes-jbg-tom-base.png"
+}

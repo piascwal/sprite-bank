@@ -1,0 +1,8 @@
+{
+  "id": "barriere",
+  "name": "Barriere",
+  "category": "ville",
+  "width": 22,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/barriere-base.png"
+}

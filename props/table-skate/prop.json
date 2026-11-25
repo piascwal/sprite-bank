@@ -1,0 +1,8 @@
+{
+  "id": "table-skate",
+  "name": "Table skate",
+  "category": "festival",
+  "width": 40,
+  "files": ["image.png"],
+  "source": "dkk-rock : assets-sources/decor/fise/table-skate-base.png"
+}

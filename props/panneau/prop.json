@@ -1,0 +1,8 @@
+{
+  "id": "panneau",
+  "name": "Panneau de bois",
+  "category": "ville",
+  "width": 26,
+  "files": ["1.png", "2.png", "3.png", "4.png"],
+  "source": "dkk-rock : assets-sources/decor/panneau-1-base.png"
+}
