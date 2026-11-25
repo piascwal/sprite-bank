@@ -15,7 +15,7 @@ d'image, jamais par jeu : un même sprite sert à tous les jeux.
 ## Usage prévu
 
 - **Personnages** (`characters/`) : pixel art 32 bits détaillé, utilisés par Fighting Friends, Foot Friends
-  (foot en un contre un) et les futurs jeux qui reprennent ces personnages.
+  (foot en un contre un), Friend Toss (lancer de potes) et les futurs jeux qui reprennent ces personnages.
 - **Objets de décor** (`props/`) : ceux de DKK (arbres, barils, barrières, stands du festival…), pour être
   réutilisés par d'autres jeux. Les héros de DKK, eux, restent dans DKK.
 - **Ennemis, PNJ et boss** (`npcs/`) : ceux de DKK (fêtards, videurs, yétis, pigeons, DJ Boucle…), avec leurs

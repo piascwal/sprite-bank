@@ -1,0 +1,131 @@
+{
+  "game": "friend-toss",
+  "label": "Friend Toss",
+  "common": ["idle", "portrait", "jump", "fall", "hit", "down", "win", "crouch", "punch_heavy"],
+  "styles": {
+    "lazy": {
+      "label": "Flemmard",
+      "poses": ["sp_nonchalant"]
+    },
+    "boxer": {
+      "label": "Boxeur",
+      "poses": ["sp_dash_punch"]
+    },
+    "drunken": {
+      "label": "Poing ivre",
+      "poses": ["sp_sway"]
+    },
+    "counter": {
+      "label": "Maître du contre",
+      "poses": ["sp_palm_strike", "pj_palm_wave"]
+    },
+    "heavy": {
+      "label": "Lourd",
+      "poses": ["sp_ground_slam", "pj_shockwave"]
+    },
+    "ice": {
+      "label": "Givre",
+      "poses": ["sp_energy_cast", "pj_ice_shard"]
+    },
+    "acrobat": {
+      "label": "Voltigeur",
+      "poses": ["sp_rising_spin"]
+    },
+    "dancer": {
+      "label": "Danseuse",
+      "poses": ["sp_pirouette"]
+    },
+    "padel": {
+      "label": "Padel",
+      "poses": ["sp_racket_smash", "pj_padel_ball"]
+    },
+    "yogi": {
+      "label": "Yogi",
+      "poses": ["sp_levitate", "pj_mandala"]
+    },
+    "trainer": {
+      "label": "Dresseuse",
+      "poses": ["sp_call_pet", "pj_pet_run1", "pj_pet_run2"]
+    },
+    "beam": {
+      "label": "Rayon",
+      "poses": ["sp_energy_cast", "pj_beam"]
+    },
+    "hockey": {
+      "label": "Hockey",
+      "poses": ["sp_slapshot", "pj_puck"]
+    }
+  },
+  "props": [
+    "caisse",
+    "tuile-bois",
+    "tonneau",
+    "tonneau-wog",
+    "tonneau-or",
+    "tronc",
+    "baril",
+    "caisson",
+    "caisson-rose",
+    "bidon",
+    "tonneau-fusee",
+    "trampoline-bois",
+    "trampoline-metal",
+    "teleporteur",
+    "cage",
+    "pneus",
+    "poubelle",
+    "rocher",
+    "rocher-neige",
+    "menhir",
+    "dolmen",
+    "enceinte-rose",
+    "enceinte-34",
+    "borne",
+    "van",
+    "voiture",
+    "sapin",
+    "arbre",
+    "palmier",
+    "parasol",
+    "transat",
+    "feu",
+    "lampadaire",
+    "buisson",
+    "buisson-neige",
+    "erable-neige",
+    "buvette",
+    "food-duke",
+    "food-glace",
+    "stand-bmx",
+    "portique-dance",
+    "barriere",
+    "cloture",
+    "toilettes",
+    "table-pique",
+    "lavande",
+    "fougere",
+    "souche",
+    "torche",
+    "plante",
+    "cairn",
+    "figuier"
+  ],
+  "npcs": [
+    "fetard",
+    "videur",
+    "yeti",
+    "yeti-alpha",
+    "pigeon",
+    "goeland",
+    "influenceur",
+    "trader",
+    "dj",
+    "enceinte",
+    "robot",
+    "champion",
+    "supporter",
+    "bouliste",
+    "marin",
+    "presse"
+  ]
+}
