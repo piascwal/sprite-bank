@@ -7,44 +7,50 @@
   "title": "Nouveau challenger",
   "quote": "À qui le tour ?",
   "files": {
-    "crouch_kick": "crouch_kick.webp",
-    "crouch_punch": "crouch_punch.webp",
+    "kick_light": "kick_light.webp",
     "down": "down.webp",
+    "jump_kick": "jump_kick.webp",
     "fall": "fall.webp",
     "crouch": "crouch.webp",
-    "block": "block.webp",
-    "hit": "hit.webp",
-    "intro": "intro.webp",
-    "idle": "idle.webp",
-    "kick_light": "kick_light.webp",
-    "jump": "jump.webp",
-    "jump_kick": "jump_kick.webp",
     "kick_heavy": "kick_heavy.webp",
+    "crouch_kick": "crouch_kick.webp",
+    "intro": "intro.webp",
+    "jump": "jump.webp",
+    "hit": "hit.webp",
+    "block": "block.webp",
+    "crouch_punch": "crouch_punch.webp",
     "portrait": "portrait.webp",
-    "punch_light": "punch_light.webp",
     "punch_heavy": "punch_heavy.webp",
-    "sp_nonchalant": "sp_nonchalant.webp",
     "sp_ball_kick": "sp_ball_kick.webp",
+    "punch_light": "punch_light.webp",
     "uppercut": "uppercut.webp",
-    "win": "win.webp",
+    "sp_nonchalant": "sp_nonchalant.webp",
+    "idle": "idle.webp",
     "super": "super.webp",
-    "stage": "stage.webp"
+    "win": "win.webp",
+    "stage": "stage.webp",
+    "head_sad": "head_sad.webp",
+    "head_fly": "head_fly.webp",
+    "head_power": "head_power.webp",
+    "head_hit": "head_hit.webp",
+    "head_ready": "head_ready.webp",
+    "head_win": "head_win.webp"
   },
   "adjust": {
-    "crouch_kick": {
-      "s": 1.38,
-      "dx": -20,
-      "dy": 0
-    },
-    "crouch_punch": {
-      "s": 1.35,
-      "dx": 38,
+    "kick_light": {
+      "s": 1.04,
+      "dx": 11,
       "dy": 0
     },
     "down": {
       "s": 1,
       "dx": 0,
       "dy": 13
+    },
+    "jump_kick": {
+      "s": 1,
+      "dx": 14,
+      "dy": 0
     },
     "fall": {
       "s": 1,
@@ -56,14 +62,14 @@
       "dx": 37,
       "dy": 0
     },
-    "block": {
-      "s": 1.02,
-      "dx": -2,
+    "kick_heavy": {
+      "s": 1,
+      "dx": -14,
       "dy": 0
     },
-    "hit": {
-      "s": 1,
-      "dx": 0,
+    "crouch_kick": {
+      "s": 1.38,
+      "dx": -20,
       "dy": 0
     },
     "intro": {
@@ -71,29 +77,24 @@
       "dx": 0,
       "dy": 0
     },
-    "idle": {
-      "s": 1.04,
-      "dx": 8,
-      "dy": 0
-    },
-    "kick_light": {
-      "s": 1.04,
-      "dx": 11,
-      "dy": 0
-    },
     "jump": {
       "s": 1.03,
       "dx": 0,
       "dy": 0
     },
-    "jump_kick": {
+    "hit": {
       "s": 1,
-      "dx": 14,
+      "dx": 0,
       "dy": 0
     },
-    "kick_heavy": {
-      "s": 1,
-      "dx": -14,
+    "block": {
+      "s": 1.02,
+      "dx": -2,
+      "dy": 0
+    },
+    "crouch_punch": {
+      "s": 1.35,
+      "dx": 38,
       "dy": 0
     },
     "portrait": {
@@ -101,19 +102,9 @@
       "dx": 0,
       "dy": 0
     },
-    "punch_light": {
-      "s": 1,
-      "dx": 12,
-      "dy": 0
-    },
     "punch_heavy": {
       "s": 1,
       "dx": 0,
-      "dy": 0
-    },
-    "sp_nonchalant": {
-      "s": 1.03,
-      "dx": -8,
       "dy": 0
     },
     "sp_ball_kick": {
@@ -121,14 +112,24 @@
       "dx": -20,
       "dy": 0
     },
+    "punch_light": {
+      "s": 1,
+      "dx": 12,
+      "dy": 0
+    },
     "uppercut": {
       "s": 1,
       "dx": -10,
       "dy": 0
     },
-    "win": {
-      "s": 0.92,
-      "dx": -10,
+    "sp_nonchalant": {
+      "s": 1.03,
+      "dx": -8,
+      "dy": 0
+    },
+    "idle": {
+      "s": 1.04,
+      "dx": 8,
       "dy": 0
     },
     "super": {
@@ -136,11 +137,57 @@
       "dx": 0,
       "dy": 0
     },
+    "win": {
+      "s": 0.92,
+      "dx": -10,
+      "dy": 0
+    },
     "stage": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_sad": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_fly": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_power": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_hit": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_ready": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_win": {
       "s": 1,
       "dx": 0,
       "dy": 0
     }
   },
-  "updated": 1795388179219
+  "updated": 1795708989564,
+  "changes": {
+    "images": [
+      "head_sad",
+      "head_fly",
+      "head_power",
+      "head_hit",
+      "head_ready",
+      "head_win"
+    ],
+    "adjust": []
+  }
 }
