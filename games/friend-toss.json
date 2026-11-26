@@ -1,77 +1,39 @@
 {
   "game": "friend-toss",
   "label": "Friend Toss",
-  "common": [
-    "idle",
-    "portrait",
-    "jump",
-    "fall",
-    "hit",
-    "down",
-    "win",
-    "head_ready",
-    "head_fly",
-    "head_power",
-    "head_hit",
-    "head_win",
-    "head_sad"
-  ],
+  "common": ["portrait", "head_ready", "head_fly", "head_power", "head_hit", "head_win", "head_sad"],
   "styles": {
-    "lazy": {
-      "label": "Flemmard",
-      "poses": ["sp_nonchalant"]
-    },
-    "boxer": {
-      "label": "Boxeur",
-      "poses": ["sp_dash_punch"]
-    },
-    "drunken": {
-      "label": "Poing ivre",
-      "poses": ["sp_sway"]
-    },
     "counter": {
       "label": "Maître du contre",
-      "poses": ["sp_palm_strike", "pj_palm_wave"]
+      "poses": ["pj_palm_wave"]
     },
     "heavy": {
       "label": "Lourd",
-      "poses": ["sp_ground_slam", "pj_shockwave"]
+      "poses": ["pj_shockwave"]
     },
     "ice": {
       "label": "Givre",
-      "poses": ["sp_energy_cast", "pj_ice_shard"]
-    },
-    "acrobat": {
-      "label": "Voltigeur",
-      "poses": ["sp_rising_spin"]
-    },
-    "dancer": {
-      "label": "Danseuse",
-      "poses": ["sp_pirouette"]
+      "poses": ["pj_ice_shard"]
     },
     "padel": {
       "label": "Padel",
-      "poses": ["sp_racket_smash", "pj_padel_ball"]
+      "poses": ["pj_padel_ball"]
     },
     "yogi": {
       "label": "Yogi",
-      "poses": ["sp_levitate", "pj_mandala"]
+      "poses": ["pj_mandala"]
     },
     "trainer": {
       "label": "Dresseuse",
-      "poses": ["sp_call_pet", "pj_pet_run1", "pj_pet_run2"]
+      "poses": ["pj_pet_run1", "pj_pet_run2"]
     },
     "beam": {
       "label": "Rayon",
-      "poses": ["sp_energy_cast", "pj_beam"]
+      "poses": ["pj_beam"]
     },
     "hockey": {
       "label": "Hockey",
-      "poses": ["sp_slapshot", "pj_puck"]
-    },
-    "balanced": {
-      "label": "Équilibré",
-      "poses": ["sp_energy_cast"]
+      "poses": ["pj_puck"]
     }
   },
   "props": [
