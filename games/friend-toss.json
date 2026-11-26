@@ -1,0 +1,129 @@
+{
+  "game": "friend-toss",
+  "label": "Friend Toss",
+  "common": [
+    "idle",
+    "portrait",
+    "jump",
+    "fall",
+    "hit",
+    "down",
+    "win",
+    "chibi_head",
+    "chibi_idle",
+    "chibi_fly",
+    "chibi_power",
+    "chibi_hit",
+    "chibi_win"
+  ],
+  "styles": {
+    "lazy": {
+      "label": "Flemmard",
+      "poses": ["sp_nonchalant"]
+    },
+    "boxer": {
+      "label": "Boxeur",
+      "poses": ["sp_dash_punch"]
+    },
+    "drunken": {
+      "label": "Poing ivre",
+      "poses": ["sp_sway"]
+    },
+    "counter": {
+      "label": "Maître du contre",
+      "poses": ["sp_palm_strike", "pj_palm_wave"]
+    },
+    "heavy": {
+      "label": "Lourd",
+      "poses": ["sp_ground_slam", "pj_shockwave"]
+    },
+    "ice": {
+      "label": "Givre",
+      "poses": ["sp_energy_cast", "pj_ice_shard"]
+    },
+    "acrobat": {
+      "label": "Voltigeur",
+      "poses": ["sp_rising_spin"]
+    },
+    "dancer": {
+      "label": "Danseuse",
+      "poses": ["sp_pirouette"]
+    },
+    "padel": {
+      "label": "Padel",
+      "poses": ["sp_racket_smash", "pj_padel_ball"]
+    },
+    "yogi": {
+      "label": "Yogi",
+      "poses": ["sp_levitate", "pj_mandala"]
+    },
+    "trainer": {
+      "label": "Dresseuse",
+      "poses": ["sp_call_pet", "pj_pet_run1", "pj_pet_run2"]
+    },
+    "beam": {
+      "label": "Rayon",
+      "poses": ["sp_energy_cast", "pj_beam"]
+    },
+    "hockey": {
+      "label": "Hockey",
+      "poses": ["sp_slapshot", "pj_puck"]
+    },
+    "balanced": {
+      "label": "Équilibré",
+      "poses": ["sp_energy_cast"]
+    }
+  },
+  "props": [
+    "caisse",
+    "tuile-bois",
+    "tonneau",
+    "tonneau-wog",
+    "tonneau-or",
+    "tronc",
+    "baril",
+    "caisson",
+    "caisson-rose",
+    "bidon",
+    "tonneau-fusee",
+    "trampoline-bois",
+    "trampoline-metal",
+    "teleporteur",
+    "cage",
+    "pneus",
+    "poubelle",
+    "rocher",
+    "rocher-neige",
+    "menhir",
+    "dolmen",
+    "enceinte-rose",
+    "enceinte-34",
+    "borne",
+    "van",
+    "voiture",
+    "sapin",
+    "arbre",
+    "palmier",
+    "parasol",
+    "transat",
+    "feu",
+    "lampadaire",
+    "buisson",
+    "buisson-neige",
+    "erable-neige",
+    "buvette",
+    "food-duke",
+    "food-glace",
+    "stand-bmx",
+    "portique-dance",
+    "barriere",
+    "toilettes",
+    "table-pique",
+    "fougere",
+    "souche",
+    "torche",
+    "plante",
+    "cairn"
+  ],
+  "npcs": ["habitue", "gardien", "pilier", "dj", "yeti-alpha", "champion", "robot"]
+}

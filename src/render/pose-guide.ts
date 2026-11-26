@@ -59,7 +59,7 @@ export function renderPoseGuide(key: SpriteKey): HTMLCanvasElement | null {
   ctx.fillStyle = BACKGROUND;
   ctx.fillRect(0, 0, GUIDE_SIZE, GUIDE_SIZE);
 
-  if (spec.portrait) {
+  if (spec.portrait || spec.head) {
     drawRigPortrait(ctx, MANNEQUIN, GUIDE_SIZE);
     return canvas;
   }
