@@ -2,7 +2,7 @@
    Ici les poses communes à tous les styles ; les coups spéciaux et projectiles sont dans special-poses.ts.
    Seule « idle » est obligatoire ; une pose absente utilise la première image disponible de sa liste `fb`. */
 import type { PoseName } from './poses';
-import { CHIBI_POSES, type ChibiSpriteKey } from './chibi-poses';
+import { HEAD_POSES, type HeadSpriteKey } from './head-poses';
 import { SPECIAL_POSES, type SpecialSpriteKey } from './special-poses';
 
 /** Poses communes, demandées quel que soit le style de combat. */
@@ -32,7 +32,7 @@ export type CommonSpriteKey =
   | 'intro'
   | 'stage';
 
-export type SpriteKey = CommonSpriteKey | SpecialSpriteKey | ChibiSpriteKey;
+export type SpriteKey = CommonSpriteKey | SpecialSpriteKey | HeadSpriteKey;
 
 export interface SpritePoseSpec {
   key: SpriteKey;
@@ -57,9 +57,7 @@ export interface SpritePoseSpec {
   pet?: boolean;
   /** Décor du personnage : image entière, sans détourage. */
   stage?: boolean;
-  /** Look « grosse tête » (chibi-poses.ts) : prompt avec les proportions chibi. */
-  chibi?: boolean;
-  /** Tête seule, sans corps. */
+  /** Look « grosse tête » (head-poses.ts) : la tête seule, sans corps, avec une expression. */
   head?: boolean;
 }
 
@@ -284,14 +282,14 @@ export const SPRITE_POSES: readonly (SpritePoseSpec & { key: CommonSpriteKey })[
 ];
 
 const SPECIAL_LIST = Object.entries(SPECIAL_POSES).map(([key, spec]) => ({ key, ...spec }) as SpritePoseSpec);
-const CHIBI_LIST = Object.entries(CHIBI_POSES).map(
-  ([key, spec]) => ({ key, chibi: true, ...spec }) as SpritePoseSpec,
+const HEAD_LIST = Object.entries(HEAD_POSES).map(
+  ([key, spec]) => ({ key, rig: null, head: true, ...spec }) as SpritePoseSpec,
 );
 
 export const SPRITE_BY_KEY = Object.fromEntries(
-  [...SPRITE_POSES, ...SPECIAL_LIST, ...CHIBI_LIST].map((s) => [s.key, s]),
+  [...SPRITE_POSES, ...SPECIAL_LIST, ...HEAD_LIST].map((s) => [s.key, s]),
 ) as Record<SpriteKey, SpritePoseSpec>;
 
 export const isSpriteKey = (key: string): key is SpriteKey => key in SPRITE_BY_KEY;
 export const isSpecialKey = (key: SpriteKey): key is SpecialSpriteKey => key in SPECIAL_POSES;
-export const isChibiKey = (key: SpriteKey): key is ChibiSpriteKey => key in CHIBI_POSES;
+export const isHeadKey = (key: SpriteKey): key is HeadSpriteKey => key in HEAD_POSES;

@@ -2,7 +2,6 @@
    La direction artistique (ART_DIRECTION) est commune à tous les prompts : la changer ici suffit. */
 import { GROUND_Y, VIEW_H } from '../core/constants';
 import type { PoseName } from './poses';
-import { CHIBI_LOOK } from './chibi-poses';
 import { SPRITE_BY_KEY, isSpecialKey, type SpriteKey, type SpritePoseSpec } from './sprite-poses';
 import { posesFor } from './needs';
 import type { Character, GameStyle } from './types';
@@ -106,7 +105,7 @@ export function buildPrompt(char: Character, key: SpriteKey): string {
   const spec = SPRITE_BY_KEY[key];
   const desc = styledDescription(char.style, key);
   if (spec.stage) return buildStagePrompt(char, '');
-  if (spec.chibi) return buildChibiPrompt(char, spec, desc);
+  if (spec.head) return buildHeadPrompt(char, desc);
   if (spec.pet) {
     const reference =
       key === 'pj_pet_idle'
@@ -132,18 +131,16 @@ export function buildPrompt(char: Character, key: SpriteKey): string {
 }
 
 /**
- * Prompt du look « grosse tête » : même personnage (visage, coiffure, tenue, couleurs), mais avec les
- * proportions chibi. Le même rendu pixel art que l'image de référence, pour rester dans la même famille.
+ * Prompt du look « grosse tête » : la tête seule du personnage, sans corps, avec une expression.
+ * Même visage que la référence, même rendu pixel art, pour rester dans la même famille.
  */
-function buildChibiPrompt(char: Character, spec: SpritePoseSpec, desc: string): string {
-  const subject = spec.head
-    ? `UNE SEULE image : ${desc}. La tête est centrée et occupe environ 85 % de l'image.`
-    : `UNE SEULE image de ce personnage EN ENTIER, vu de côté (profil 3/4) et tourné vers la DROITE, dans la posture suivante : ${desc}. Un seul personnage, une seule pose. ${SINGLE_FIGURE} ${framing(spec)}`;
+function buildHeadPrompt(char: Character, expression: string): string {
   return (
-    `À partir de l'image de référence jointe du personnage « ${char.name} » (garde exactement le même visage, la même coiffure, les mêmes vêtements, les mêmes accessoires et les mêmes couleurs), dessine-le en ${CHIBI_LOOK}. ` +
-    `${subject} ` +
-    `Pas d'effet spécial ni de texte. Si une image de mannequin gris est jointe, elle ne donne que l'attitude générale : garde les proportions grosse tête décrites ici. ` +
-    `${STYLE.replace('les mêmes proportions et ', '')} ${BACKGROUND} ${FORMAT}`
+    `À partir de l'image de référence jointe du personnage « ${char.name} », génère UNE SEULE image : sa TÊTE SEULE, sans cou ni épaules ni corps, ` +
+    `de trois quarts tournée vers la DROITE, grosse et bien ronde, centrée, qui occupe environ 85 % de l'image. ` +
+    `Le visage doit être parfaitement reconnaissable : mêmes traits, même coiffure, même couleur de cheveux, même barbe, mêmes lunettes et accessoires de tête que la référence. ` +
+    `Expression : ${expression}. L'expression est franche et lisible même en tout petit. ` +
+    `Une seule tête, aucun texte. ${STYLE} ${BACKGROUND} ${FORMAT}`
   );
 }
 

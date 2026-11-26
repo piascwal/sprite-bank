@@ -9,12 +9,12 @@
     "hit",
     "down",
     "win",
-    "chibi_head",
-    "chibi_idle",
-    "chibi_fly",
-    "chibi_power",
-    "chibi_hit",
-    "chibi_win"
+    "head_ready",
+    "head_fly",
+    "head_power",
+    "head_hit",
+    "head_win",
+    "head_sad"
   ],
   "styles": {
     "lazy": {
