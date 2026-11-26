@@ -1,7 +1,21 @@
 {
   "game": "friend-toss",
   "label": "Friend Toss",
-  "common": ["idle", "portrait", "jump", "fall", "hit", "down", "win"],
+  "common": [
+    "idle",
+    "portrait",
+    "jump",
+    "fall",
+    "hit",
+    "down",
+    "win",
+    "chibi_head",
+    "chibi_idle",
+    "chibi_fly",
+    "chibi_power",
+    "chibi_hit",
+    "chibi_win"
+  ],
   "styles": {
     "lazy": {
       "label": "Flemmard",
@@ -111,5 +125,5 @@
     "plante",
     "cairn"
   ],
-  "npcs": ["fetard", "videur", "pilier", "dj", "yeti-alpha", "champion", "robot"]
+  "npcs": ["habitue", "gardien", "pilier", "dj", "yeti-alpha", "champion", "robot"]
 }

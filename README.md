@@ -120,6 +120,19 @@ mesure 20) ou, pour les grands boss, `width`. L'onglet **Ennemis & PNJ** de l'at
 Un jeu les demande dans ses besoins (`"npcs": ["boss", "fetard"]`, ou `"*"`), et `copy-for-game.mjs` les
 copie dans un 4e dossier.
 
+## Les looks d'un personnage
+
+Un personnage garde une seule identité (visage, coiffure, tenue, couleurs), mais peut exister dans
+plusieurs **looks**, rangés comme des poses de son dossier :
+
+- le look **combat** (par défaut) : pixel art 32 bits détaillé, proportions réalistes (`idle`, `jump`…) ;
+- le look **grosse tête** (chibi) : tête énorme, corps minuscule et ramassé, silhouette presque ronde,
+  lisible de loin (`chibi_head`, `chibi_idle`, `chibi_fly`, `chibi_power`, `chibi_hit`, `chibi_win`),
+  décrit dans `src/catalog/chibi-poses.ts`.
+
+Un look est nommé d'après son style, jamais d'après un jeu : n'importe quel jeu peut le demander dans ses
+besoins. Un futur look (vue de dessus pour un RPG…) s'ajoute de la même façon, dans son propre fichier.
+
 ## Une nouvelle pose pour un jeu
 
 1. Le catalogue (`src/catalog/sprite-poses.ts` ou `special-poses.ts`) reçoit la pose : nom, description
