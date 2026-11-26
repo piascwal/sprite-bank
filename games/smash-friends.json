@@ -1,0 +1,65 @@
+{
+  "game": "smash-friends",
+  "label": "Smash Friends",
+  "common": [
+    "idle",
+    "portrait",
+    "walk1",
+    "walk2",
+    "crouch",
+    "jump",
+    "block",
+    "punch_light",
+    "punch_heavy",
+    "kick_light",
+    "kick_heavy",
+    "crouch_punch",
+    "crouch_kick",
+    "uppercut",
+    "jump_punch",
+    "jump_kick",
+    "super",
+    "hit",
+    "fall",
+    "down",
+    "win",
+    "intro",
+    "stage"
+  ],
+  "styles": {
+    "balanced": { "label": "Équilibré", "poses": ["sp_energy_cast", "pj_fireball", "sp_rising_uppercut"] },
+    "heavy": { "label": "Lourd", "poses": ["sp_ground_slam", "pj_shockwave", "sp_shoulder_charge"] },
+    "boxer": { "label": "Boxeur", "poses": ["sp_dash_punch", "sp_hook_lunge"] },
+    "hockey": { "label": "Hockey", "poses": ["sp_slapshot", "pj_puck", "sp_body_check", "sp_hockey_fight"] },
+    "acrobat": { "label": "Voltigeur", "poses": ["sp_rising_spin", "sp_slide"] },
+    "beam": { "label": "Rayon", "poses": ["sp_energy_cast", "pj_beam", "sp_burst"] },
+    "counter": {
+      "label": "Maître du contre",
+      "poses": ["sp_counter_stance", "sp_palm_strike", "pj_palm_wave"]
+    },
+    "ice": {
+      "label": "Givre",
+      "poses": ["sp_energy_cast", "pj_ice_shard", "sp_ground_slam", "pj_ice_spike"]
+    },
+    "trainer": {
+      "label": "Dresseuse",
+      "poses": ["sp_call_pet", "sp_signal_jump", "pj_pet_run1", "pj_pet_run2", "pj_pet_leap"]
+    },
+    "dancer": { "label": "Danseuse", "poses": ["sp_pirouette", "sp_pole_spin", "pj_spotlight"] },
+    "padel": { "label": "Padel", "poses": ["sp_racket_drive", "sp_racket_smash", "pj_padel_ball"] },
+    "yogi": { "label": "Yogi", "poses": ["sp_levitate", "sp_mudra", "pj_mandala", "pj_spirit"] },
+    "drunken": { "label": "Poing ivre", "poses": ["sp_sway", "sp_lob_throw", "pj_bottle", "sp_spin_kick"] },
+    "lazy": { "label": "Flemmard", "poses": ["sp_ball_kick", "sp_nonchalant"] }
+  },
+  "props": [
+    "caisse",
+    "tonneau",
+    "baril",
+    "arme-flipper",
+    "arme-frisbee",
+    "arme-pile",
+    "arme-minidisc",
+    "arme-donuts",
+    "arme-boitier-cd"
+  ]
+}
