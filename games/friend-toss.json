@@ -54,6 +54,10 @@
     "hockey": {
       "label": "Hockey",
       "poses": ["sp_slapshot", "pj_puck"]
+    },
+    "balanced": {
+      "label": "Équilibré",
+      "poses": ["sp_energy_cast"]
     }
   },
   "props": [
@@ -99,33 +103,13 @@
     "stand-bmx",
     "portique-dance",
     "barriere",
-    "cloture",
     "toilettes",
     "table-pique",
-    "lavande",
     "fougere",
     "souche",
     "torche",
     "plante",
-    "cairn",
-    "figuier"
+    "cairn"
   ],
-  "npcs": [
-    "fetard",
-    "videur",
-    "yeti",
-    "yeti-alpha",
-    "pigeon",
-    "goeland",
-    "influenceur",
-    "trader",
-    "dj",
-    "enceinte",
-    "robot",
-    "champion",
-    "supporter",
-    "bouliste",
-    "marin",
-    "presse"
-  ]
+  "npcs": ["fetard", "videur", "pilier", "dj", "yeti-alpha", "champion", "robot"]
 }
