@@ -7,37 +7,51 @@
   "title": "Nouveau challenger",
   "quote": "À qui le tour ?",
   "files": {
-    "portrait": "portrait.webp",
-    "idle": "idle.webp",
-    "kick_light": "kick_light.webp",
     "sp_levitate": "sp_levitate.webp",
-    "block": "block.webp",
+    "kick_light": "kick_light.webp",
     "sp_mudra": "sp_mudra.webp",
+    "idle": "idle.webp",
+    "portrait": "portrait.webp",
+    "block": "block.webp",
     "punch_light": "punch_light.webp",
-    "intro": "intro.webp",
     "uppercut": "uppercut.webp",
-    "kick_heavy": "kick_heavy.webp",
-    "walk1": "walk1.webp",
-    "punch_heavy": "punch_heavy.webp",
+    "intro": "intro.webp",
     "crouch": "crouch.webp",
     "jump": "jump.webp",
-    "win": "win.webp",
-    "hit": "hit.webp",
-    "super": "super.webp",
-    "pj_spirit": "pj_spirit.webp",
+    "punch_heavy": "punch_heavy.webp",
+    "kick_heavy": "kick_heavy.webp",
     "down": "down.webp",
-    "fall": "fall.webp",
+    "crouch_kick": "crouch_kick.webp",
     "jump_kick": "jump_kick.webp",
     "stage": "stage.webp",
-    "crouch_kick": "crouch_kick.webp",
-    "crouch_block": "crouch_block.webp",
-    "walk2": "walk2.webp",
+    "walk1": "walk1.webp",
+    "fall": "fall.webp",
+    "hit": "hit.webp",
+    "win": "win.webp",
     "crouch_punch": "crouch_punch.webp",
+    "crouch_block": "crouch_block.webp",
     "jump_punch": "jump_punch.webp",
-    "pj_mandala": "pj_mandala.webp"
+    "pj_spirit": "pj_spirit.webp",
+    "pj_mandala": "pj_mandala.webp",
+    "walk2": "walk2.webp",
+    "super": "super.webp",
+    "head_fly": "head_fly.webp",
+    "head_hit": "head_hit.webp",
+    "head_power": "head_power.webp",
+    "head_ready": "head_ready.webp"
   },
   "adjust": {
-    "portrait": {
+    "sp_levitate": {
+      "s": 1.09,
+      "dx": 20,
+      "dy": -1
+    },
+    "kick_light": {
+      "s": 1.04,
+      "dx": 7,
+      "dy": 0
+    },
+    "sp_mudra": {
       "s": 1,
       "dx": 0,
       "dy": 0
@@ -47,33 +61,18 @@
       "dx": 6,
       "dy": 0
     },
-    "kick_light": {
-      "s": 1.04,
-      "dx": 7,
+    "portrait": {
+      "s": 1,
+      "dx": 0,
       "dy": 0
-    },
-    "sp_levitate": {
-      "s": 1.09,
-      "dx": 20,
-      "dy": -1
     },
     "block": {
       "s": 1.03,
       "dx": -7,
       "dy": 0
     },
-    "sp_mudra": {
-      "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
     "punch_light": {
       "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
-    "intro": {
-      "s": 1.03,
       "dx": 0,
       "dy": 0
     },
@@ -82,19 +81,9 @@
       "dx": -30,
       "dy": 0
     },
-    "kick_heavy": {
-      "s": 1,
-      "dx": -28,
-      "dy": 0
-    },
-    "walk1": {
-      "s": 1,
+    "intro": {
+      "s": 1.03,
       "dx": 0,
-      "dy": 0
-    },
-    "punch_heavy": {
-      "s": 1,
-      "dx": -11,
       "dy": 0
     },
     "crouch": {
@@ -107,24 +96,14 @@
       "dx": 5,
       "dy": 0
     },
-    "win": {
+    "punch_heavy": {
       "s": 1,
-      "dx": 0,
-      "dy": -40
-    },
-    "hit": {
-      "s": 1,
-      "dx": -5,
+      "dx": -11,
       "dy": 0
     },
-    "super": {
+    "kick_heavy": {
       "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
-    "pj_spirit": {
-      "s": 1,
-      "dx": 0,
+      "dx": -28,
       "dy": 0
     },
     "down": {
@@ -132,9 +111,9 @@
       "dx": -10,
       "dy": 15
     },
-    "fall": {
-      "s": 1,
-      "dx": 0,
+    "crouch_kick": {
+      "s": 1.32,
+      "dx": -52,
       "dy": 0
     },
     "jump_kick": {
@@ -147,9 +126,29 @@
       "dx": 0,
       "dy": 0
     },
-    "crouch_kick": {
-      "s": 1.32,
-      "dx": -52,
+    "walk1": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "fall": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "hit": {
+      "s": 1,
+      "dx": -5,
+      "dy": 0
+    },
+    "win": {
+      "s": 1,
+      "dx": 0,
+      "dy": -40
+    },
+    "crouch_punch": {
+      "s": 1.17,
+      "dx": 41,
       "dy": 0
     },
     "crouch_block": {
@@ -157,26 +156,60 @@
       "dx": 26,
       "dy": 0
     },
-    "walk2": {
-      "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
-    "crouch_punch": {
-      "s": 1.17,
-      "dx": 41,
-      "dy": 0
-    },
     "jump_punch": {
       "s": 1.04,
       "dx": 13,
+      "dy": 0
+    },
+    "pj_spirit": {
+      "s": 1,
+      "dx": 0,
       "dy": 0
     },
     "pj_mandala": {
       "s": 1,
       "dx": 0,
       "dy": 0
+    },
+    "walk2": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "super": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_fly": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_hit": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_power": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_ready": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
     }
   },
-  "updated": 1795370783427
+  "updated": 1795726291789,
+  "changes": {
+    "images": [
+      "head_fly",
+      "head_hit",
+      "head_power",
+      "head_ready"
+    ],
+    "adjust": []
+  }
 }
