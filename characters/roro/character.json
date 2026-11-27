@@ -11,29 +11,30 @@
     "block": "block.webp",
     "down": "down.webp",
     "crouch_punch": "crouch_punch.webp",
-    "fall": "fall.webp",
     "crouch": "crouch.webp",
     "sp_racket_drive": "sp_racket_drive.webp",
-    "portrait": "portrait.webp",
-    "kick_heavy": "kick_heavy.webp",
+    "fall": "fall.webp",
     "jump_punch": "jump_punch.webp",
     "hit": "hit.webp",
+    "portrait": "portrait.webp",
+    "stage": "stage.webp",
     "pj_padel_ball": "pj_padel_ball.webp",
-    "jump_kick": "jump_kick.webp",
+    "kick_heavy": "kick_heavy.webp",
     "intro": "intro.webp",
+    "jump_kick": "jump_kick.webp",
     "kick_light": "kick_light.webp",
     "idle": "idle.webp",
-    "jump": "jump.webp",
-    "punch_light": "punch_light.webp",
     "punch_heavy": "punch_heavy.webp",
-    "crouch_kick": "crouch_kick.webp",
+    "win": "win.webp",
+    "jump": "jump.webp",
     "walk1": "walk1.webp",
+    "crouch_kick": "crouch_kick.webp",
+    "uppercut": "uppercut.webp",
     "super": "super.webp",
     "walk2": "walk2.webp",
+    "punch_light": "punch_light.webp",
     "sp_racket_smash": "sp_racket_smash.webp",
-    "uppercut": "uppercut.webp",
-    "win": "win.webp",
-    "stage": "stage.webp"
+    "head_ready": "head_ready.webp"
   },
   "adjust": {
     "crouch_block": {
@@ -56,11 +57,6 @@
       "dx": 36,
       "dy": 0
     },
-    "fall": {
-      "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
     "crouch": {
       "s": 1.2,
       "dx": 43,
@@ -71,12 +67,7 @@
       "dx": 0,
       "dy": 0
     },
-    "portrait": {
-      "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
-    "kick_heavy": {
+    "fall": {
       "s": 1,
       "dx": 0,
       "dy": 0
@@ -91,18 +82,33 @@
       "dx": 0,
       "dy": 0
     },
+    "portrait": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "stage": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
     "pj_padel_ball": {
       "s": 1,
       "dx": 0,
       "dy": 0
     },
-    "jump_kick": {
+    "kick_heavy": {
       "s": 1,
       "dx": 0,
       "dy": 0
     },
     "intro": {
       "s": 1.02,
+      "dx": 0,
+      "dy": 0
+    },
+    "jump_kick": {
+      "s": 1,
       "dx": 0,
       "dy": 0
     },
@@ -116,19 +122,24 @@
       "dx": 7,
       "dy": 0
     },
+    "punch_heavy": {
+      "s": 1,
+      "dx": -15,
+      "dy": 0
+    },
+    "win": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
     "jump": {
       "s": 1.09,
       "dx": 0,
       "dy": 0
     },
-    "punch_light": {
+    "walk1": {
       "s": 1,
       "dx": 0,
-      "dy": 0
-    },
-    "punch_heavy": {
-      "s": 1,
-      "dx": -15,
       "dy": 0
     },
     "crouch_kick": {
@@ -136,9 +147,9 @@
       "dx": -29,
       "dy": 0
     },
-    "walk1": {
+    "uppercut": {
       "s": 1,
-      "dx": 0,
+      "dx": -21,
       "dy": 0
     },
     "super": {
@@ -151,30 +162,27 @@
       "dx": 6,
       "dy": 0
     },
+    "punch_light": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
     "sp_racket_smash": {
       "s": 1,
       "dx": 0,
       "dy": 0
     },
-    "uppercut": {
-      "s": 1,
-      "dx": -21,
-      "dy": 0
-    },
-    "win": {
-      "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
-    "stage": {
+    "head_ready": {
       "s": 1,
       "dx": 0,
       "dy": 0
     }
   },
-  "updated": 1795508746163,
+  "updated": 1795778989230,
   "changes": {
-    "images": ["stage"],
+    "images": [
+      "head_ready"
+    ],
     "adjust": []
   }
 }
