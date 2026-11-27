@@ -7,69 +7,50 @@
   "title": "Nouveau challenger",
   "quote": "À qui le tour ?",
   "files": {
-    "portrait": "portrait.webp",
     "idle": "idle.webp",
-    "win": "win.webp",
-    "walk2": "walk2.webp",
-    "walk1": "walk1.webp",
-    "intro": "intro.webp",
-    "crouch_kick": "crouch_kick.webp",
+    "portrait": "portrait.webp",
     "kick_light": "kick_light.webp",
-    "hit": "hit.webp",
+    "win": "win.webp",
     "crouch_block": "crouch_block.webp",
-    "jump": "jump.webp",
+    "hit": "hit.webp",
+    "crouch_kick": "crouch_kick.webp",
+    "walk2": "walk2.webp",
+    "intro": "intro.webp",
     "uppercut": "uppercut.webp",
+    "jump": "jump.webp",
     "down": "down.webp",
     "sp_energy_cast": "sp_energy_cast.webp",
-    "super": "super.webp",
-    "crouch": "crouch.webp",
-    "punch_light": "punch_light.webp",
-    "block": "block.webp",
     "jump_punch": "jump_punch.webp",
+    "crouch": "crouch.webp",
+    "block": "block.webp",
     "jump_kick": "jump_kick.webp",
+    "punch_light": "punch_light.webp",
+    "super": "super.webp",
+    "walk1": "walk1.webp",
     "fall": "fall.webp",
-    "kick_heavy": "kick_heavy.webp",
-    "stage": "stage.webp",
-    "sp_ground_slam": "sp_ground_slam.webp",
     "punch_heavy": "punch_heavy.webp",
-    "crouch_punch": "crouch_punch.webp",
     "pj_ice_shard": "pj_ice_shard.webp",
-    "pj_ice_spike": "pj_ice_spike.webp"
+    "sp_ground_slam": "sp_ground_slam.webp",
+    "kick_heavy": "kick_heavy.webp",
+    "pj_ice_spike": "pj_ice_spike.webp",
+    "crouch_punch": "crouch_punch.webp",
+    "stage": "stage.webp",
+    "head_hit": "head_hit.webp",
+    "head_fly": "head_fly.webp",
+    "head_ready": "head_ready.webp",
+    "head_power": "head_power.webp",
+    "head_win": "head_win.webp",
+    "head_sad": "head_sad.webp"
   },
   "adjust": {
-    "portrait": {
-      "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
     "idle": {
       "s": 1.04,
       "dx": 8,
       "dy": 0
     },
-    "win": {
+    "portrait": {
       "s": 1,
       "dx": 0,
-      "dy": 0
-    },
-    "walk2": {
-      "s": 1,
-      "dx": 9,
-      "dy": 0
-    },
-    "walk1": {
-      "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
-    "intro": {
-      "s": 1,
-      "dx": 13,
-      "dy": 1
-    },
-    "crouch_kick": {
-      "s": 1.28,
-      "dx": -40,
       "dy": 0
     },
     "kick_light": {
@@ -77,7 +58,7 @@
       "dx": 0,
       "dy": 0
     },
-    "hit": {
+    "win": {
       "s": 1,
       "dx": 0,
       "dy": 0
@@ -87,15 +68,35 @@
       "dx": 23,
       "dy": 0
     },
-    "jump": {
-      "s": 1.01,
+    "hit": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "crouch_kick": {
+      "s": 1.28,
+      "dx": -40,
+      "dy": 0
+    },
+    "walk2": {
+      "s": 1,
       "dx": 9,
       "dy": 0
+    },
+    "intro": {
+      "s": 1,
+      "dx": 13,
+      "dy": 1
     },
     "uppercut": {
       "s": 1,
       "dx": -17,
       "dy": -1
+    },
+    "jump": {
+      "s": 1.01,
+      "dx": 9,
+      "dy": 0
     },
     "down": {
       "s": 1,
@@ -107,7 +108,7 @@
       "dx": 8,
       "dy": 0
     },
-    "super": {
+    "jump_punch": {
       "s": 1,
       "dx": 0,
       "dy": 0
@@ -117,17 +118,7 @@
       "dx": 27,
       "dy": 0
     },
-    "punch_light": {
-      "s": 1,
-      "dx": 7,
-      "dy": 0
-    },
     "block": {
-      "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
-    "jump_punch": {
       "s": 1,
       "dx": 0,
       "dy": 0
@@ -137,22 +128,22 @@
       "dx": 0,
       "dy": 0
     },
+    "punch_light": {
+      "s": 1,
+      "dx": 7,
+      "dy": 0
+    },
+    "super": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "walk1": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
     "fall": {
-      "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
-    "kick_heavy": {
-      "s": 1,
-      "dx": -17,
-      "dy": 0
-    },
-    "stage": {
-      "s": 1,
-      "dx": 0,
-      "dy": 0
-    },
-    "sp_ground_slam": {
       "s": 1,
       "dx": 0,
       "dy": 0
@@ -162,25 +153,77 @@
       "dx": -19,
       "dy": 0
     },
-    "crouch_punch": {
-      "s": 1.26,
-      "dx": 29,
-      "dy": 0
-    },
     "pj_ice_shard": {
       "s": 1,
       "dx": 0,
+      "dy": 0
+    },
+    "sp_ground_slam": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "kick_heavy": {
+      "s": 1,
+      "dx": -17,
       "dy": 0
     },
     "pj_ice_spike": {
       "s": 1,
       "dx": 0,
       "dy": 0
+    },
+    "crouch_punch": {
+      "s": 1.26,
+      "dx": 29,
+      "dy": 0
+    },
+    "stage": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_hit": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_fly": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_ready": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_power": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_win": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
+    },
+    "head_sad": {
+      "s": 1,
+      "dx": 0,
+      "dy": 0
     }
   },
-  "updated": 1795508746160,
+  "updated": 1795761297705,
   "changes": {
-    "images": ["stage"],
+    "images": [
+      "head_hit",
+      "head_fly",
+      "head_ready",
+      "head_power",
+      "head_win",
+      "head_sad"
+    ],
     "adjust": []
   }
 }
